@@ -471,7 +471,7 @@ mark,
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -1434,4 +1434,4 @@ pre code {
   }
 
   .offset-lg-10 {
-    margin
+    marginl

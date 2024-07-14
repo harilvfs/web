@@ -1,2 +1,2 @@
 Testing 
-ALl This credit to @yushi1007
+All This credit to @yushi1007

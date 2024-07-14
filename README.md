@@ -5,7 +5,7 @@
   https://www.chalisehari.com.np/
 </h1>
 <p align="center">
-Welcome to my portfolio website v2.0, thank you for checking it out. 
+Welcome to my website, thank you for checking it out. 
 </p>
 
 

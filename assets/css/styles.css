@@ -305,49 +305,6 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
-.technical-skills {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-}
-
-.technical-skills h2 {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.technical-skills h2 i {
-  margin-right: 10px;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill {
-  background-color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.skill i {
-  font-size: 20px;
-}
-
-.skill:hover {
-  background-color: #555;
-}
 
 /* ===== WORK =====*/
 .work__container {

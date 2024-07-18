@@ -1,86 +1,239 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--==================== UNICONS ====================-->
-        
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Responsive Portfolio Website</title>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>aayush.dev</title>
     </head>
     <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Aayush</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
         </header>
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Aayush</span><br> Linux Developer</h1>
+
+                    <a href="mailto:aayushchalise8@gmail.com?subject=Inquiry%20from%20Your%20Website&body=Dear%20Aayush,%0D%0A%0D%0AI%20am%20writing%20to%20you%20regarding%20[insert%20topic%20here].%20Could%20you%20please%20provide%20more%20information%20on%20this%20matter?%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+    <a href="https://www.linkedin.com/in/aayushchalese" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://www.behance.net/aayushchalese" class="home__social-icon" target="_blank"><i class='bx bxl-behance'></i></a>
+    <a href="https://github.com/aayushx402" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+</div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
+                        </g>
+                    </svg>
+                </div>
             </section>
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <div>
+                            <h2>About Me</h2>
+    <p>Hello! I'm Aayush Chalise, a passionate Linux developer and Rust expert with a deep love for open-source technologies. With over a year of experience in using Arch Linux, I have honed my skills in creating efficient and robust solutions tailored to Linux environments.</p>
+
+    <h3>My Journey</h3>
+    <p>My journey in the tech world began with a fascination for the flexibility and power of Linux systems. Over time, this curiosity led me to explore various aspects of Linux development, from system administration to kernel customization. Along the way, I discovered Rust, a programming language that perfectly complements my passion for building secure and high-performance applications.</p>
+
+    <h3>Expertise</h3>
+    <p><strong>Linux Development</strong>: Proficient in leveraging the power of Linux for software development, system optimization, and automation. Experienced with various distributions, with a special fondness for Arch Linux.</p>
+    <p><strong>Rust Programming</strong>: Expertise in Rust, focusing on safe concurrency, performance optimization, and system-level programming. I enjoy creating applications that are not only fast but also safe and reliable.</p>
+    <p><strong>Research and Development</strong>: Actively engaged in research and development activities within Linux environments, exploring new technologies, optimizing existing systems, and contributing to open-source projects.</p>
+
+    <h3>My Work</h3>
+    <p>Throughout my career, I have been involved in numerous projects that demonstrate my capabilities in Linux and Rust. Whether it's developing custom solutions for clients or contributing to community-driven projects, my goal is to push the boundaries of what's possible with these technologies.</p>
+
+    <h3>Let's Connect</h3>
+    <p>I'm always eager to connect with like-minded individuals and explore new opportunities. Whether you're a fellow developer, a potential collaborator, or just someone interested in the world of Linux and Rust, feel free to reach out!</p>
+</div>
+
+                    </div>                                   
+                </div>
             </section>
 
-            <!--==================== SKILLS ====================-->
+            <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
 
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <div>
+    <h2>Professional Skills</h2>
+                            
+    <h3>Linux Development</h3>
+    <p>Proficient in leveraging the power of Linux for software development, system optimization, and automation. Experienced with various distributions, with a special fondness for Arch Linux. Skilled in system administration, shell scripting, and kernel customization.</p>
+    
+    <h3>Rust Programming</h3>
+    <p>Expertise in Rust, focusing on safe concurrency, performance optimization, and system-level programming. Adept at creating applications that are not only fast but also secure and reliable.</p>
+    
+    <h3>Go Programming</h3>
+    <p>Experienced in Go, developing efficient and scalable applications. Knowledgeable in using Go for backend development, concurrent programming, and building robust services.</p>
+    
+    <h3>Project Configuration</h3>
+    <p>Skilled in configuring and managing various projects across different environments. Proficient in using tools like Docker, Kubernetes, and CI/CD pipelines to streamline development and deployment processes. Capable of setting up development environments, managing dependencies, and ensuring smooth project workflows.</p>
+</div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-paint skills__icon'></i>
+                                <span class="skills__name">UX/UI</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
             </section>
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
 
+                <div class="work__container bd-grid">
+                    <a href="" class="work__img">
+                        <img src="assets/img/work1.jpg" alt="">
+                    </a>
+                    <a href="https://github.com/aayushx402/Rust-practice" class="work__img">
+                        <img src="assets/img/work2.jpg" alt="">
+                    </a>
+                    <a href="https://github.com/aayushx402/sway" class="work__img">
+                        <img src="assets/img/work3.jpg" alt="">
+                    </a>
+                    <a href="https://github.com/aayushx402/MyVim" class="work__img">
+                        <img src="assets/img/work4.jpg" alt="">
+                    </a>
+                    <a href="https://github.com/aayushx402/linux-project" class="work__img">
+                        <img src="assets/img/work5.jpg" alt="">
+                    </a>
+                    <a href="https://github.com/aayushx402/Log-In" class="work__img">
+                        <img src="assets/img/work6.jpg" alt="">
+                    </a>
+                </div>
             </section>
 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-            </section>
-
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                
-            </section>
-
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-
-            </section>
-
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-                
-            </section>
-
-            <!--==================== CONTACT ME ====================-->
+            <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
 
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Send" class="contact__button button">
+                    </form>
+                </div>
             </section>
         </main>
 
-        <!--==================== FOOTER ====================-->
+        <!--===== FOOTER =====-->
         <footer class="footer">
-         
+            <p class="footer__title">Aayush</p>
+            <div class="footer__social">
+    <a href="https://reddit.com/user/aayush-le" class="footer__icon" target="_blank"><i class='bx bxl-reddit'></i></a>
+    <a href="https://instagram.com/aayushxvf" class="footer__icon" target="_blank"><i class='bx bxl-instagram'></i></a>
+    <a href="https://www.behance.net/aayushchalese" class="footer__icon" target="_blank"><i class='bx bxl-behance'></i></a>
+    <a href="https://www.buymeacoffee.com/aayushchalise" class="footer__icon" target="_blank"><i class='bx bx-coffee'></i></a>
+    <a href="https://www.paypal.com/mep/dashboard" class="footer__icon" target="_blank"><i class='bx bxl-paypal'></i></a>            
+</div>
+
+            <p class="footer__copy">&#169; Aayush. All rigths reserved</p>
         </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
 
-        <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
 
-        <!--==================== MAIN JS ====================-->
-        <script src=""></script>
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

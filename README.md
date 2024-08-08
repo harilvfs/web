@@ -22,7 +22,7 @@
   <li><strong>Contact Form:</strong> Reach out to me directly via a simple and effective contact form.</li>
 </ul>
 
-## Demo
+## Preview
 
 ![Desktop Demo](./website-preview/20240809_015058.png "Desktop Demo")
 

@@ -22,8 +22,9 @@
   <li><strong>Contact Form:</strong> Reach out to me directly via a simple and effective contact form.</li>
 </ul>
 
-<h2>📷 Preview</h2>
-<p><img src="link_to_your_website_preview_image" alt="Website Preview"></p>
+## Demo
+
+![Desktop Demo](./website-preview/desk.png "Desktop Demo")
 
 <h2>📚 Setup Instructions</h2>
 <ol>

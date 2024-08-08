@@ -24,7 +24,7 @@
 
 ## Demo
 
-![Desktop Demo](./website-preview/desk-min.png "Desktop Demo")
+![Desktop Demo](./website-preview/20240809_015058.png "Desktop Demo")
 
 <h2>📚 Setup Instructions</h2>
 <ol>

@@ -1,6 +1,6 @@
 <h1>🌐 chalisehari.com.np</h1>
 
-<p>Welcome to the repository for my personal website <a href="https://chalisehari.com.np" target="_blank">chalisehari.com.np</a>. </p>
+<p>Welcome to the repository for my personal website <a href="https://chalisehari.com.np" target="_blank">chalisehari.com.np</a> </p>
 
 <h2>🚀 Features</h2>
 <ul>

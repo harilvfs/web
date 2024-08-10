@@ -2,24 +2,9 @@
 
 <p>Welcome to the repository for my personal website <a href="https://chalisehari.com.np" target="_blank">chalisehari.com.np</a> </p>
 
-<h2>🚀 Features</h2>
-<ul>
-  <li><strong>Minimalist Design:</strong> A clean and modern interface that lets the content shine.</li>
-  <li><strong>Responsive Layout:</strong> Optimized for all devices, from desktops to mobile phones.</li>
-  <li><strong>Fast Loading:</strong> Lightweight and optimized for quick access.</li>
-  <li><strong>Built with Love:</strong> Crafted using the latest web technologies to ensure top-notch performance.</li>
-</ul>
-
 <h2>🛠️ Tech Stack</h2>
 <ul>
   <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
-</ul>
-
-<h2>🌟 Highlights</h2>
-<ul>
-  <li><strong>Personal Blog:</strong> Thoughts, tutorials, and stories on web development, tech, and more.</li>
-  <li><strong>Portfolio:</strong> A showcase of my projects and achievements.</li>
-  <li><strong>Contact Form:</strong> Reach out to me directly via a simple and effective contact form.</li>
 </ul>
 
 ## Preview

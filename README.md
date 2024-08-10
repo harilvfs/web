@@ -1,6 +1,6 @@
 <h1>🌐 chalisehari.com.np</h1>
 
-<a href="https://chalisehari.com.np"><strong>➥ Live Demo</strong></a>
+<a href="https://chalisehari.com.np"><strong>➥ Live Here</strong></a>
 
 <h2>🛠️ Tech Stack</h2>
 <ul>

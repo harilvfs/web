@@ -4,7 +4,7 @@
 
 ## Preview
 
-![Desktop Demo](./website-preview/20240826_001321.png "Desktop Demo")
+![Desktop Demo](https://github.com/aayushx402/website/blob/main/website%20preview/20240826_001321.png)
 
 <h2>🛠️ Tech Stack</h2>
 <ul>

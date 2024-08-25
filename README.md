@@ -1,7 +1,9 @@
 <p align="center"><strong>🌐 chalisehari.com.np</strong>
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 
-<p align="center"><strong>Preview</strong>
+<p align="center">
+  <strong style="font-size: 1.5em; color: #ff6347;">Preview</strong>
+</p>
   
 ![Desktop Demo](https://github.com/aayushx402/website/blob/main/website%20preview/20240826_002824.png)
 

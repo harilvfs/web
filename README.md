@@ -1,15 +1,15 @@
-<h1>🌐 chalisehari.com.np</h1>
+<p align="center"><strong>🌐 chalisehari.com.np</strong>
 
 <a href="https://chalisehari.com.np"><strong>➥ Live Here</strong></a>
+
+## Preview
+
+![Desktop Demo](./website-preview/20240826_001321.png "Desktop Demo")
 
 <h2>🛠️ Tech Stack</h2>
 <ul>
   <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
 </ul>
-
-## Preview
-
-![Desktop Demo](./website-preview/20240809_015058.png "Desktop Demo")
 
 <h2>📚 Setup Instructions</h2>
 <ol>

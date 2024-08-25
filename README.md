@@ -1,6 +1,5 @@
 <p align="center"><strong>🌐 chalisehari.com.np</strong>
-
-<a href="https://chalisehari.com.np"><strong>➥ Live Here</strong></a>
+<a href="https://chalisehari.com.np"><strong>➥ Live Here</strong></a></p>
 
 ## Preview
 

@@ -1,11 +1,6 @@
 <p align="center"><strong>🌐 chalisehari.com.np</strong>
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 
-<p align="center">
-  
-## Preview
-</p>
-  
 ![Desktop Demo](https://github.com/aayushx402/website/blob/main/website%20preview/20240826_002824.png)
 
 <h2>🛠️ Tech Stack</h2>

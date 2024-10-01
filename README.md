@@ -1,7 +1,7 @@
 <p align="center"><strong>🌐 chalisehari.com.np</strong>
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 
-![Desktop Demo](https://github.com/aayushx402/website/blob/main/website%20preview/20240826_002824.png)
+![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/20240826_002824.png)
 
 <h2>🛠️ Tech Stack</h2>
 <ul>
@@ -13,12 +13,12 @@
   <li><strong>Clone the repo:</strong>
     
 ```sh
-git clone https://github.com/aayushx402/website
+git clone https://github.com/harilvfs/web
 ```
  <li><strong>Navigate to the project directory:</strong>
    
 ```sh
-cd website
+cd web
 ```
   </li>
 

@@ -13,12 +13,12 @@
   <li><strong>Clone the repo:</strong>
     
 ```sh
-git clone https://github.com/harilvfs/web
+git clone https://github.com/harilvfs/web.git
 ```
  <li><strong>Navigate to the project directory:</strong>
    
 ```sh
-cd web
+cd web/
 ```
   </li>
 

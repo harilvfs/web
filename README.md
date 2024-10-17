@@ -1,7 +1,7 @@
 <p align="center"><strong>🌐 chalisehari.com.np</strong>
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 
-![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/20240826_002824.png)
+![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png)
 
 <h2>🛠️ Tech Stack</h2>
 <ul>

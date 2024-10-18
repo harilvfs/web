@@ -1,6 +1,8 @@
 <p align="center"><strong>🌐 chalisehari.com.np</strong>
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fchalisehari.com.np)
+
 ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png)
 
 <h2>🛠️ Tech Stack</h2>

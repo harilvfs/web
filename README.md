@@ -2,7 +2,7 @@
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 <div align="center">
   
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fchalisehari.com.np&style=for-the-badge)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fchalisehari.com.np&style=for-the-badge&logo=web)
 </div>
 
 ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png)

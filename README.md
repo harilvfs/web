@@ -67,11 +67,15 @@ cd web/
 
 - **Open http://localhost:8000 in your browser** (or the port specified by the development server) to view the site.
 
+> [!NOTE]
+> This website code is based on the work of [codewithsadee](https://github.com/codewithsadee)
+
 <h2>✨ Contribution</h2>
 <p>Feel free to fork this project, create a new branch, and submit a pull request with your enhancements. All kinds of contributions are welcome!</p>
 
 <h2>📄 License</h2>
 <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<br>
 
 <p align="center">
 	Copyright &copy; 2023-present <a href="https://github.com/harilvfs" target="_blank">Hari Chalise</a>

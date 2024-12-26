@@ -2,7 +2,7 @@
 <a href="https://chalisehari.com.np"><strong> ➥ Live Here</strong></a></p>
 <div align="center">
   
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fchalisehari.com.np&style=for-the-badge&logo=github&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29) <img src="https://img.shields.io/badge/Maintained%3F-Yes-1c1c29?style=for-the-badge&color=ef9f9c&logoColor=85e185&labelColor=1c1c29"> <img src="https://img.shields.io/github/license/carch-org/docs?style=for-the-badge&color=e0ea9d&logoColor=D9E0EE&labelColor=171b22">
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fchalisehari.com.np&style=for-the-badge&logo=github&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29) <img src="https://img.shields.io/badge/Maintained%3F-Yes-1c1c29?style=for-the-badge&color=ef9f9c&logoColor=85e185&labelColor=1c1c29"> <img src="https://img.shields.io/github/license/harilvfs/web?style=for-the-badge&color=e0ea9d&logoColor=D9E0EE&labelColor=171b22">
 </div>
 
 ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png)

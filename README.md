@@ -12,36 +12,60 @@
   <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
 </ul>
 
-<h2>📚 Setup Instructions</h2>
-<ol>
-  <li><strong>Clone the repo:</strong>
-    
-```sh
+## 📚 Setup Instructions (Python3)
+
+**Prerequisites:**
+
+* Ensure you have Git installed on your system. You can install it using the package manager. 
+
+**Installation:**
+
+- **Clone the repository:**
+
+```bash
 git clone https://github.com/harilvfs/web.git
 ```
- <li><strong>Navigate to the project directory:</strong>
-   
-```sh
+
+- **Navigate to the project directory:**
+
+```bash
 cd web/
 ```
-  </li>
 
-  <li><strong>Install dependencies:</strong>
-    
-```sh
-npm install
-```
-  </li>
+- **Install Python3 (if not already installed):**
 
-  <li><strong>Start the development server:</strong>
-    
-```sh
-npm start
-```
-  </li>
+   - **Arch Linux:**
 
-   <li><strong>Open <code>http://localhost:3000</code> in your browser to view the site.</strong></li>
-</ol>
+     ```bash
+     sudo pacman -S python
+     ```
+
+   - **Debian/Ubuntu:**
+
+     ```bash
+     sudo apt update
+     sudo apt install python3
+     ```
+
+   - **Fedora/CentOS:**
+
+     ```bash
+     sudo dnf install python3
+     ```
+
+   - **OpenSUSE:**
+
+     ```bash
+     sudo zypper install python3
+     ```
+
+- **Run the development server:**
+
+   ```
+   python3 -m http.server 8000
+   ```
+
+- **Open http://localhost:8000 in your browser** (or the port specified by the development server) to view the site.
 
 <h2>✨ Contribution</h2>
 <p>Feel free to fork this project, create a new branch, and submit a pull request with your enhancements. All kinds of contributions are welcome!</p>
@@ -49,3 +73,6 @@ npm start
 <h2>📄 License</h2>
 <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 
+<p align="center">
+	Copyright &copy; 2023-present <a href="https://github.com/harilvfs" target="_blank">Hari Chalise</a>
+</p>

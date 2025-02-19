@@ -1,0 +1,59 @@
+<button id="back-to-top" title="Go to top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M12 4l8 8h-6v8h-4v-8H4z" fill="currentColor"/>
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTop = document.getElementById('back-to-top');
+  
+  window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  };
+
+  backToTop.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+});
+</script>
+
+<style>
+/* Back to Top Button Styling */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #47c4f1;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and movement */
+  z-index: 1000;
+  transform: translateY(0); /* Initial position */
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+#back-to-top svg {
+  fill: #fff;
+}
+
+#back-to-top:hover {
+  background-color: #006fa6;
+  transform: translateY(-10px); /* Move up by 10px when hovered */
+}
+
+</style>
+

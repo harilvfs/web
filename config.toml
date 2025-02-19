@@ -29,43 +29,102 @@ featuredImageField = "image"
 rssFullContent = true
 favicon = "images/favicon.png"
 
-  [params.footer]
-  since = 2_020
 
-  [params.dateFormat]
-  published = "Feb 19, 2025"
-  lastUpdated = "Feb 19, 2025 15:04 MST"
+# font variable
+# Give your font name from google font. add font weight using ":wght@" and separate by ";"
+# example: "Work Sans:wght@400;500;600"
+primary_font = "PT Sans:wght@400;700"
+secondary_font = ""
+icon_font = "Font Awesome 6 Free"
 
-    [params.sidebar.avatar]
-    enabled = true
-    local = true
-    src = "img/aayush.png"
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
 
-  [params.article]
-  math = false
-  toc = true
-  readingTime = true
+########################## Plugings ######################################
+# css plugins
+[[params.plugins.css]]
+link = "css/vendor/bootstrap.min.css"
+attributes = "media='all'"
+[[params.plugins.css]]
+link = "css/custom-nav.css"
+[[params.plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
-    [params.article.license]
-    enabled = true
-    default = "Licensed under MIT"
+# js plugins - Reordered and optimized
+[[params.plugins.js]]
+link = "js/vendor/jquery.min.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "js/vendor/bootstrap.min.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "js/vendor/shuffle.min.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "js/vendor/fuse.min.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "js/vendor/mark.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "js/vendor/search.js"
+attributes = "defer"
+[[params.plugins.js]]
+link = "js/theme.js"
+attributes = "defer"
+
+#[params.footer]
+#since = 2_020
+
+[[menu.footer]]
+weight = 3
+url = "/privacy/"
+name = "Privacy Policy"
+
+[[menu.footer]]
+weight = 4
+url = "/terms-condition/"
+name = "Terms & Conditions"
+
+[params.dateFormat]
+published = "Feb 19, 2025"
+#lastUpdated = "Feb 19, 2025 15:04 MST"
+
+[params.sidebar.avatar]
+enabled = true
+local = true
+src = "img/aayush.png"
+
+[params.article]
+math = false
+toc = true
+readingTime = true
+
+[params.article.license]
+enabled = false
+default = "Licensed under MIT"
 
 [params.comments]
-  enabled = true
-  provider = "giscus"
+enabled = true
+provider = "giscus"
 
-  [params.comments.giscus]
-  repo = "harilvfs/web"
-  repoID = "R_kgDOM5vgZw"
-  category = "General"
-  categoryID = "DIC_kwDOM5vgZ84CnFAm"
-  mapping = "pathname"
-  strict = false
-  reactionsEnabled = 1
-  emitMetadata = 0
-  inputPosition = "top"
-  theme = "catppuccin_mocha"
-  lang = "en"
+[params.comments.giscus]
+repo = "harilvfs/web"
+repoID = "R_kgDOM5vgZw"
+category = "General"
+categoryID = "DIC_kwDOM5vgZ84CnFAm"
+mapping = "pathname"
+strict = false
+reactionsEnabled = 1
+emitMetadata = 0
+inputPosition = "top"
+theme = "catppuccin_mocha"
+lang = "en"
 
 [[params.widgets.homepage]]
 type = "search"
@@ -73,20 +132,20 @@ type = "search"
 [[params.widgets.homepage]]
 type = "archives"
 
-  [params.widgets.homepage.params]
-  limit = 5
+[params.widgets.homepage.params]
+limit = 5
 
 [[params.widgets.homepage]]
 type = "categories"
 
-  [params.widgets.homepage.params]
-  limit = 10
+[params.widgets.homepage.params]
+limit = 10
 
 [[params.widgets.homepage]]
 type = "tag-cloud"
 
-  [params.widgets.homepage.params]
-  limit = 10
+[params.widgets.homepage.params]
+limit = 10
 
 [[params.widgets.page]]
 type = "toc"
@@ -98,9 +157,9 @@ card = "summary_large_image"
 enabled = false
 local = false
 
-  [params.colorScheme]
-  toggle = true
-  default = "auto"
+[params.colorScheme]
+toggle = true
+default = "dark"
 
 [params.imageProcessing.cover]
 enabled = true
@@ -111,57 +170,57 @@ enabled = true
 [menu]
 main = [ ]
 
-  [[menu.social]]
-  identifier = "github"
-  name = "GitHub"
-  url = "https://github.com/harilvfs"
+[[menu.social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/harilvfs"
 
-    [menu.social.params]
-    icon = "brand-github"
+[menu.social.params]
+icon = "brand-github"
 
-  [[menu.social]]
-  identifier = "x"
-  name = "X"
-  url = "https://x.com/harilvfs"
+[[menu.social]]
+identifier = "x"
+name = "X"
+url = "https://x.com/harilvfs"
 
-    [menu.social.params]
-    icon = "brand-twitter"
+[menu.social.params]
+icon = "brand-twitter"
   
-  [[menu.social]]
-  identifier = "reddit"
-  name = "Reddit"
-  url = "https://reddit.com/u/aayush-le"
+[[menu.social]]
+identifier = "reddit"
+name = "Reddit"
+url = "https://reddit.com/u/aayush-le"
 
-    [menu.social.params]
-    icon = "reddit"
+[menu.social.params]
+icon = "reddit"
 
-  [[menu.social]]
-  identifier = "telegram"
-  name = "Telegram"
-  url = "https://t.me/+4unMy4BzvA9lOWZl"
+[[menu.social]]
+identifier = "telegram"
+name = "Telegram"
+url = "https://t.me/+4unMy4BzvA9lOWZl"
 
-    [menu.social.params]
-    icon = "telegram"
+[menu.social.params]
+icon = "telegram"
 
 [related]
 includeNewer = true
 threshold = 60
 toLower = false
 
-  [[related.indices]]
-  name = "tags"
-  weight = 100
+[[related.indices]]
+name = "tags"
+weight = 100
 
-  [[related.indices]]
-  name = "categories"
-  weight = 200
+[[related.indices]]
+name = "categories"
+weight = 200
 
 [markup.goldmark.extensions.passthrough]
 enable = true
 
-  [markup.goldmark.extensions.passthrough.delimiters]
-  block = [ [ "\\[", "\\]" ], [ "$$", "$$" ] ]
-  inline = [ [ "\\(", "\\)" ] ]
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [ [ "\\[", "\\]" ], [ "$$", "$$" ] ]
+inline = [ [ "\\(", "\\)" ] ]
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -180,3 +239,87 @@ lineNos = true
 lineNumbersInTable = true
 tabWidth = 4
 
+### Special build and Security settings
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  minifyOutput = true
+[minify.tdewolff.html]
+  keepWhitespace = false
+[minify.tdewolff.js]
+  keepVarNames = false
+  precision = 0
+[minify.tdewolff.css]
+  keepCSS2 = true
+
+[imaging]
+quality = 75
+anchor = "Smart"
+resampleFilter = "Lanczos"
+
+[imaging.exif]
+includeFields = ""
+excludeFields = ""
+disableDate = true
+disableLatLong = true
+
+[security.headers]
+  [security.headers.customHeaders]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com cdn.jsdelivr.net cdnjs.cloudflare.com *.google.com *.googletagmanager.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net utteranc.es *.utteranc.es *.youtube.com youtube.com *.ytimg.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com cdnjs.cloudflare.com fonts.googleapis.com *.fontawesome.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com *.fontawesome.com; frame-src 'self' *.shopify.com *.myshopify.com *.doubleclick.net *.google.com *.youtube.com youtube.com *.youtu.be youtu.be github.com *.github.com utteranc.es; img-src 'self' data: * *.shopify.com *.shopifycdn.com *.google.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net *.youtube.com youtube.com *.youtu.be youtu.be *.ytimg.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com *.google-analytics.com *.doubleclick.net api.github.com *.youtube.com youtube.com *.ytimg.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com *.fontawesome.com; base-uri 'self';"
+
+[server]
+[[server.headers]]
+for = "/**"
+[server.headers.values]
+  Content-Encoding = ["gzip"]
+  Cache-Control = ["public, max-age=31536000"]
+  Link = [
+    "</css/vendor/bootstrap.min.css>; rel=preload; as=style",
+    "</js/vendor/jquery.min.js>; rel=preload; as=script"
+  ]
+  # Update your existing Content-Security-Policy to include cache settings
+  # Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com cdn.jsdelivr.net cdnjs.cloudflare.com *.google.com *.googletagmanager.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net utteranc.es *.utteranc.es *.youtube.com youtube.com *.ytimg.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com cdnjs.cloudflare.com fonts.googleapis.com *.fontawesome.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com *.fontawesome.com; frame-src 'self' *.shopify.com *.myshopify.com *.doubleclick.net *.google.com *.youtube.com youtube.com *.youtu.be youtu.be github.com *.github.com utteranc.es; img-src 'self' data: * *.shopify.com *.shopifycdn.com *.google.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net *.youtube.com youtube.com *.youtu.be youtu.be *.ytimg.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com *.google-analytics.com *.doubleclick.net api.github.com *.youtube.com youtube.com *.ytimg.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com *.fontawesome.com; base-uri 'self';"
+
+
+[build]
+[build.processing]
+  skip_processing = false
+[build.processing.js]
+  bundle = true
+  minify = true
+  target = "es2015"
+  avoid_tdz = true
+  includes = ["(?!vendor).*"]
+
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[caches]
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxAge = "48h"
+  [caches.getjson]
+    dir = ':cacheDir/:project'
+    maxAge = "48h"
+  [caches.getcsv]
+    dir = ':cacheDir/:project'
+    maxAge = "48h"
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxAge = "48h"
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxAge = "48h"
+  [caches.modules]
+    dir = ':cacheDir/modules'
+    maxAge = "168h"  # 1 week

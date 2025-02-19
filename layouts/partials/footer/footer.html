@@ -1,10 +1,81 @@
 {{- $ThemeVersion := "3.30.0" -}}
+
 <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      
+      <!-- Footer Menu Section -->
+      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+        <ul class="list-inline mb-0">
+          <li class="nav-item">
+            <a class="nav-link d-block p-2 animated-link" href="/terms-conditions">Terms and Conditions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-block p-2 animated-link" href="/privacy">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    <!-- Copyright Section -->
+    <div class="text-center mt-4">
+      <section class="copyright">
+        &copy;
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}
         {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
-    </section>
+      </section>
+    </div>
+  </div>
 </footer>
+
+<style>
+  .site-footer .container {
+    text-align: center;
+  }
+
+  .site-footer .row {
+    justify-content: center;
+  }
+
+  .site-footer .copyright {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .site-footer .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .site-footer .nav-link {
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px; /* Space for the underline */
+    transition: color 0.3s ease-in-out;
+  }
+
+  /* Animated Underline Effect */
+  .site-footer .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+  }
+
+  .site-footer .nav-link:hover {
+    color: #007bff;
+  }
+
+  .site-footer .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+</style>
+
+

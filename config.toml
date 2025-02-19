@@ -1,0 +1,182 @@
+baseurl = "https://chalisehari.com.np/"
+languageCode = "en-us"
+theme = "hugo-theme-stack"
+title = "Hari Chalise"
+copyright = "Hari Chalise"
+DefaultContentLanguage = "en"
+hasCJKLanguage = false
+
+[languages.en]
+languageName = "English"
+title = "Hari Chalise"
+weight = 1
+
+[languages.en.params.sidebar]
+subtitle = "A Linux Enthusiast"
+
+[services.googleAnalytics]
+
+[pagination]
+pagerSize = 3
+
+[permalinks]
+post = "/p/:slug/"
+page = "/:slug/"
+
+[params]
+mainSections = [ "post" ]
+featuredImageField = "image"
+rssFullContent = true
+favicon = "static/aayush.png"
+
+  [params.footer]
+  since = 2_020
+
+  [params.dateFormat]
+  published = "Jan 02, 2006"
+  lastUpdated = "Jan 02, 2006 15:04 MST"
+
+    [params.sidebar.avatar]
+    enabled = true
+    local = true
+    src = "img/aayush.png"
+
+  [params.article]
+  math = false
+  toc = true
+  readingTime = true
+
+    [params.article.license]
+    enabled = true
+    default = "Licensed under MIT"
+
+[params.comments]
+  enabled = true
+  provider = "giscus"
+
+  [params.comments.giscus]
+  repo = "harilvfs/web"
+  repoID = "R_kgDOM5vgZw"
+  category = "General"
+  categoryID = "DIC_kwDOM5vgZ84CnFAm"
+  mapping = "pathname"
+  strict = false
+  reactionsEnabled = 1
+  emitMetadata = 0
+  inputPosition = "top"
+  theme = "catppuccin_mocha"
+  lang = "en"
+
+[[params.widgets.homepage]]
+type = "search"
+
+[[params.widgets.homepage]]
+type = "archives"
+
+  [params.widgets.homepage.params]
+  limit = 5
+
+[[params.widgets.homepage]]
+type = "categories"
+
+  [params.widgets.homepage.params]
+  limit = 10
+
+[[params.widgets.homepage]]
+type = "tag-cloud"
+
+  [params.widgets.homepage.params]
+  limit = 10
+
+[[params.widgets.page]]
+type = "toc"
+
+[params.opengraph.twitter]
+card = "summary_large_image"
+
+[params.defaultImage.opengraph]
+enabled = false
+local = false
+
+  [params.colorScheme]
+  toggle = true
+  default = "auto"
+
+[params.imageProcessing.cover]
+enabled = true
+
+[params.imageProcessing.content]
+enabled = true
+
+[menu]
+main = [ ]
+
+  [[menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/harilvfs"
+
+    [menu.social.params]
+    icon = "brand-github"
+
+  [[menu.social]]
+  identifier = "x"
+  name = "X"
+  url = "https://x.com/harilvfs"
+
+    [menu.social.params]
+    icon = "brand-twitter"
+  
+  [[menu.social]]
+  identifier = "reddit"
+  name = "Reddit"
+  url = "https://reddit.com/u/aayush-le"
+
+    [menu.social.params]
+    icon = "reddit"
+
+  [[menu.social]]
+  identifier = "telegram"
+  name = "Telegram"
+  url = "https://t.me/+4unMy4BzvA9lOWZl"
+
+    [menu.social.params]
+    icon = "telegram"
+
+[related]
+includeNewer = true
+threshold = 60
+toLower = false
+
+  [[related.indices]]
+  name = "tags"
+  weight = 100
+
+  [[related.indices]]
+  name = "categories"
+  weight = 200
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+  [markup.goldmark.extensions.passthrough.delimiters]
+  block = [ [ "\\[", "\\]" ], [ "$$", "$$" ] ]
+  inline = [ [ "\\(", "\\)" ] ]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+endLevel = 4
+ordered = true
+startLevel = 2
+
+[markup.highlight]
+noClasses = false
+codeFences = true
+guessSyntax = true
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+tabWidth = 4
+

@@ -7,18 +7,18 @@
 
 ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png)
 
-<h2>🛠️ Tech Stack</h2>
-<ul>
-  <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
-</ul>
+## 🛠️ Tech Stack
 
-## 📚 Setup Instructions (Python3)
+- **Framework:** Hugo
+- **Languages:** Markdown, HTML, CSS, Go (Hugo Templates)
+
+## 📚 Setup Instructions (Hugo)
 
 **Prerequisites:**
 
-* Ensure you have Git installed on your system. You can install it using the package manager. 
+- Ensure you have Git and Hugo installed.
 
-**Installation:**
+### **Installation:**
 
 - **Clone the repository:**
 
@@ -32,45 +32,41 @@ git clone https://github.com/harilvfs/web.git
 cd web/
 ```
 
-- **Install Python3 (if not already installed):**
+- **Install Hugo (if not already installed):**
 
-   - **Arch Linux:**
+>  - **Arch Linux:**
+>    ```bash	
+>    sudo pacman -S hugo
+>    ```
 
-     ```bash
-     sudo pacman -S python
-     ```
+>  - **Debian/Ubuntu:**
+>    ```bash
+>    sudo apt update
+>    sudo apt install hugo
+>    ```
 
-   - **Debian/Ubuntu:**
+>  - **Fedora:**
+>    ```bash
+>    sudo dnf install hugo
+>    ```
 
-     ```bash
-     sudo apt update
-     sudo apt install python3
-     ```
+>  - **MacOS (Homebrew):**
+>    ```bash
+>    brew install hugo
+>    ```
 
-   - **Fedora/CentOS:**
+### **Run the Development Server:**
 
-     ```bash
-     sudo dnf install python3
-     ```
+```bash
+hugo server -D
+```
 
-   - **OpenSUSE:**
-
-     ```bash
-     sudo zypper install python3
-     ```
-
-- **Run the development server:**
-
-   ```
-   python3 -m http.server 8000
-   ```
-
-- **Open http://localhost:8000 in your browser** (or the port specified by the development server) to view the site.
+> - Open **http://localhost:1313** in your browser to view the site.
 
 <br>
 
 > [!NOTE]
-> This website code is based on the work of [codewithsadee](https://github.com/codewithsadee)
+> This website is built using Hugo and customized to fit my personal needs.
 
 <h2>✨ Contribution</h2>
 <p>Feel free to fork this project, create a new branch, and submit a pull request with your enhancements. All kinds of contributions are welcome!</p>

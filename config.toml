@@ -29,10 +29,6 @@ featuredImageField = "image"
 rssFullContent = true
 favicon = "images/favicon.png"
 
-
-# font variable
-# Give your font name from google font. add font weight using ":wght@" and separate by ";"
-# example: "Work Sans:wght@400;500;600"
 primary_font = "PT Sans:wght@400;700"
 secondary_font = ""
 icon_font = "Font Awesome 6 Free"
@@ -42,7 +38,6 @@ icon_font = "Font Awesome 6 Free"
 enable = false
 expire_days = 2
 
-########################## Plugings ######################################
 # css plugins
 [[params.plugins.css]]
 link = "css/vendor/bootstrap.min.css"
@@ -52,7 +47,6 @@ link = "css/custom-nav.css"
 [[params.plugins.css]]
 link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
-# js plugins - Reordered and optimized
 [[params.plugins.js]]
 link = "js/vendor/jquery.min.js"
 attributes = "defer"
@@ -92,8 +86,8 @@ url = "/terms-condition/"
 name = "Terms & Conditions"
 
 [params.dateFormat]
-published = "Feb 19, 2025"
-#lastUpdated = "Feb 19, 2025 15:04 MST"
+published = "Jan 2, 2006"   
+# lastUpdated = "Jan 2, 2006 15:04 MST"  
 
 [params.sidebar.avatar]
 enabled = true
@@ -192,7 +186,7 @@ name = "Reddit"
 url = "https://reddit.com/u/aayush-le"
 
 [menu.social.params]
-icon = "reddit"
+icon = ""
 
 [[menu.social]]
 identifier = "telegram"
@@ -200,7 +194,7 @@ name = "Telegram"
 url = "https://t.me/+4unMy4BzvA9lOWZl"
 
 [menu.social.params]
-icon = "telegram"
+icon = ""
 
 [related]
 includeNewer = true
@@ -238,8 +232,6 @@ lineNoStart = 1
 lineNos = true
 lineNumbersInTable = true
 tabWidth = 4
-
-### Special build and Security settings
 
 [minify]
   disableCSS = false

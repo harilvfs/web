@@ -1,7 +1,7 @@
 +++
 author = "Aayush"
 title = "Installing Python and Setting Up a Virtual Environment"
-date = "2025-02-19"
+date = "2025-02-20"
 description = "A comprehensive guide on installing Python and setting up a virtual environment without using pip."
 categories = ["python"]
 tags = ["Python", "Virtual Environment", "Arch Linux"]
@@ -62,8 +62,12 @@ If you encounter errors when using `pip`, it may be due to missing dependencies 
   ```
 
 - **Permission Errors**: Avoid using `pip` with `sudo`. Instead, always install packages inside a virtual environment.
+  ```bash
+  pip install package_name
+  ```
+
 
 ## Conclusion
-Setting up a Python virtual environment without relying on `pip` system-wide is the best practice for avoiding conflicts and ensuring a clean development setup. By following this guide, you should have a fully functional Python environment isolated from your system packages.
+Using a virtual environment is the best practice for Python development, as it isolates project dependencies and prevents system conflicts. By following this guide, you now have a clean and efficient Python setup that avoids modifying system-wide packages.
 
 

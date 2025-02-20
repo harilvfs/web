@@ -8,7 +8,7 @@
 > [!NOTE]
 > Preview is outdated!!!
 
-![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png)
+<!-- ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png) -->
 
 ## 🛠️ Tech Stack
 

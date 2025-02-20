@@ -1,7 +1,7 @@
 +++
 author = "Hugo Authors"
 title = "Install Chaotic AUR on Arch Linux"
-date = "2025-02-19"
+date = "2025-02-18"
 description = "A clean and enhanced guide to installing Chaotic AUR on Arch Linux and its derivatives."
 tags = [
     "arch linux",

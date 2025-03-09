@@ -314,6 +314,7 @@ body {
     font-size: 1.3rem;
     cursor: pointer;
     transition: color 0.3s ease;
+    z-index: 1000;
 }
 
 .theme-toggle:hover {
@@ -663,6 +664,20 @@ body.light-theme {
     
     .projects-container {
         grid-template-columns: 1fr;
+    }
+
+    .theme-toggle {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background-color: var(--bg-card);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 }
 

@@ -3,13 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const themeIcon = themeToggle.querySelector('i');
     
+    console.log("Theme toggle initialized");
+    console.log("Theme toggle element:", themeToggle);
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
         themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
     
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function(e) {
+        console.log("Theme toggle clicked");
         body.classList.toggle('light-theme');
         
         if (body.classList.contains('light-theme')) {

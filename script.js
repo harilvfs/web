@@ -1,30 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
+    
+    // Make sure we have a theme toggle element
+    if (!themeToggle) {
+        console.error("Theme toggle element not found!");
+        return;
+    }
+    
     const themeIcon = themeToggle.querySelector('i');
     
     console.log("Theme toggle initialized");
     console.log("Theme toggle element:", themeToggle);
     
+    // Apply saved theme on page load
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
     
-    themeToggle.addEventListener('click', function(e) {
-        console.log("Theme toggle clicked");
-        body.classList.toggle('light-theme');
-        
-        if (body.classList.contains('light-theme')) {
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-            localStorage.setItem('theme', 'light');
-        } else {
-            themeIcon.classList.replace('fa-sun', 'fa-moon');
-            localStorage.setItem('theme', 'dark');
-        }
+    // Use touchstart event for mobile devices in addition to click
+    ['click', 'touchstart'].forEach(eventType => {
+        themeToggle.addEventListener(eventType, function(e) {
+            // Prevent default behavior for touchstart to avoid double triggering
+            if (eventType === 'touchstart') {
+                e.preventDefault();
+            }
+            
+            console.log(`Theme toggle ${eventType} detected`);
+            body.classList.toggle('light-theme');
+            
+            if (themeIcon) {
+                if (body.classList.contains('light-theme')) {
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                    localStorage.setItem('theme', 'dark');
+                }
+            } else {
+                // If there's no icon, still save the theme
+                localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+            }
+        });
     });
     
+    // Rest of your existing code below
     const sections = document.querySelectorAll('.section');
     
     function checkSections() {
@@ -45,20 +67,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const scrollTopBtn = document.getElementById('scrollTop');
     
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
-    
-    scrollTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
         });
-    });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
     
     const skillBars = document.querySelectorAll('.skill-progress');
     

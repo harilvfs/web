@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     
-    // Make sure we have a theme toggle element
     if (!themeToggle) {
         console.error("Theme toggle element not found!");
         return;
@@ -13,17 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Theme toggle initialized");
     console.log("Theme toggle element:", themeToggle);
     
-    // Apply saved theme on page load
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
         if (themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
     
-    // Use touchstart event for mobile devices in addition to click
     ['click', 'touchstart'].forEach(eventType => {
         themeToggle.addEventListener(eventType, function(e) {
-            // Prevent default behavior for touchstart to avoid double triggering
             if (eventType === 'touchstart') {
                 e.preventDefault();
             }
@@ -40,13 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('theme', 'dark');
                 }
             } else {
-                // If there's no icon, still save the theme
                 localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
             }
         });
     });
     
-    // Rest of your existing code below
     const sections = document.querySelectorAll('.section');
     
     function checkSections() {

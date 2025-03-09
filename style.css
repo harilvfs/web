@@ -305,15 +305,20 @@ body {
 }
 
 .theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: var(--bg-card);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border: none;
-    color: var(--text-secondary);
-    font-size: 1.3rem;
     cursor: pointer;
-    transition: color 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
     z-index: 1000;
 }
 
@@ -678,6 +683,11 @@ body.light-theme {
         justify-content: center;
         align-items: center;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .theme-toggle {
+        width: 50px; /* Larger touch target */
+        height: 50px; /* Larger touch target */
     }
 }
 

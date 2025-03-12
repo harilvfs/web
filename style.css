@@ -188,26 +188,6 @@ body {
     width: 100%;
 }
 
-.terminal-header-mini {
-    background-color: var(--terminal-header);
-    padding: 0.4rem 0.8rem;
-    display: flex;
-    align-items: center;
-}
-
-.terminal-title-mini {
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    font-family: 'Fira Code', monospace;
-}
-
-.terminal-content-mini {
-    padding: 1rem;
-    font-family: 'Fira Code', monospace;
-    color: var(--terminal-text);
-    overflow-x: auto;
-}
-
 .terminal-link {
     background-color: transparent;
     border: 1px solid var(--accent);

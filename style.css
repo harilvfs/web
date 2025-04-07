@@ -200,7 +200,7 @@ body {
 }
 
 .sidebar {
-    background-color: rgba(15, 23, 42, 0.7);
+    background-color: var(--sidebar-bg, rgba(15, 23, 42, 0.7));
     padding: 2rem;
     position: sticky;
     top: 0;
@@ -210,7 +210,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid var(--sidebar-border, rgba(255, 255, 255, 0.05));
 }
 
 .sidebar-content {
@@ -234,10 +234,11 @@ body {
 }
 
 .profile-pic img {
-   width: 110%;
+   width: 100%;
    height: 100%;
    border-radius: 50%;
-   object-fit: contain;
+   object-fit: cover;
+   object-position: center;
 }
 
 .profile-pic:hover {
@@ -573,8 +574,8 @@ button[type="submit"]:hover {
     text-align: center;
     margin-top: 3rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
+    border-top: 1px solid var(--sidebar-border, rgba(255, 255, 255, 0.05));
+    color: var(--footer-text, var(--text-secondary));
     font-size: 0.9rem;
 }
 
@@ -628,6 +629,9 @@ body.light-theme {
     --terminal-prompt: #0a84ff;
     --terminal-green: #008000;
     --terminal-blue: #0066cc;
+    --sidebar-bg: rgba(241, 245, 249, 0.9);
+    --sidebar-border: rgba(0, 0, 0, 0.05);
+    --footer-text: #333333;
 }
 
 @media (max-width: 992px) {

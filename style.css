@@ -253,7 +253,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-right: 1px solid var(--ctp-surface0);
 }
 
 .sidebar-content {
@@ -939,7 +938,6 @@ button[type="submit"].loading::after {
         position: relative;
         height: auto;
         padding: 2rem 1rem;
-        border-right: none;
         border-bottom: 1px solid var(--ctp-surface0);
     }
     
@@ -1031,7 +1029,6 @@ body.light-theme .scroll-top:hover {
 
 body.light-theme .sidebar {
     background-color: var(--ctp-latte-mantle);
-    border-right: 1px solid var(--ctp-latte-surface0);
 }
 
 body.light-theme .footer {

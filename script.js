@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 800,
-            once: true,
-            disable: window.innerWidth < 768
+            once: true
         });
     }
 

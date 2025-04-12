@@ -6,12 +6,13 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="icon" href="./aayush.png" type="image/png">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
       <link rel="stylesheet" href="style.css">
       <title>Hari Chalise | Linux Specialist</title>
    </head>
    <body>
-      <button class="theme-toggle" id="themeToggle">
-      <i class="fas fa-moon"></i>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+         <i class="fas fa-moon"></i>
       </button>
       <div class="container">
          <div class="sidebar">
@@ -22,19 +23,19 @@
                <div class="terminal-header">
                   <span class="terminal-user">hari@archlinux</span>:<span class="terminal-path">~</span>$
                </div>
-               <h1>Hari Chalise</h1>
-               <p>Kathmandu, Nepal</p>
+               <h1 class="user-name">Hari Chalise</h1>
+               <p class="user-location">Kathmandu, Nepal</p>
                <div class="distro-icons">
                   <span class="distro" title="Arch Linux"><i class="fab fa-linux"></i> Arch</span>
                   <span class="distro" title="Debian"><i class="fab fa-linux"></i> Debian</span>
                   <span class="distro" title="Fedora"><i class="fab fa-fedora"></i> fedora</span>
                </div>
                <div class="social-links">
-                  <a href="https://x.com/harilvfs" target="_blank"><i class="fab fa-twitter"></i></a>
-                  <a href="https://reddit.com/u/aayush-le" target="_blank"><i class="fab fa-reddit"></i></a>
-                  <a href="https://t.me/harilvfs" target="_blank"><i class="fab fa-telegram"></i></a>
-                  <a href="https://https://discord.com/invite/8NJWstnUHd" target="_blank"><i class="fab fa-discord"></i></a>
-                  <a href="https://github.com/harilvfs" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://x.com/harilvfs" target="_blank" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                  <a href="https://reddit.com/u/aayush-le" target="_blank" aria-label="Reddit Profile"><i class="fab fa-reddit"></i></a>
+                  <a href="https://t.me/harilvfs" target="_blank" aria-label="Telegram Contact"><i class="fab fa-telegram"></i></a>
+                  <a href="https://discord.com/invite/8NJWstnUHd" target="_blank" aria-label="Discord Server"><i class="fab fa-discord"></i></a>
+                  <a href="https://github.com/harilvfs" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                </div>
             </div>
          </div>
@@ -85,49 +86,49 @@
                <h2><i class="fas fa-cogs"></i> Skills</h2>
                <p>Technical specialist with focus on practical skills over formal education, with continuous learning in open-source technology. Background includes Computer Management education with emphasis on hands-on technical experience and solving complex problems with elegant solutions.</p>
                <div class="skills-container">
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fab fa-linux"></i> Linux Environments</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="80"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fas fa-terminal"></i> Bash Scripting</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="90"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fab fa-rust"></i> Rust Programming</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="70"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fas fa-desktop"></i> Photoshop</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="50"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fas fa-server"></i> System Administration</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="85"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fas fa-network-wired"></i> Networking</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="75"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fas fa-shield-alt"></i> Security Hardening</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="65"></div>
                      </div>
                   </div>
-                  <div class="skill-card">
+                  <div class="skill-card card-elevated">
                      <div class="skill-name"><i class="fas fa-tachometer-alt"></i> Performance Tuning</div>
                      <div class="skill-bar">
                         <div class="skill-progress" data-width="80"></div>
@@ -138,39 +139,39 @@
             <div class="section" id="projects">
                <h2><i class="fas fa-folder-open"></i> Projects</h2>
                <div class="projects-container">
-                  <div class="project-card">
+                  <div class="project-card tilt-effect">
                      <div class="project-icon">
                         <i class="fas fa-laptop-code"></i>
                      </div>
                      <div class="project-details">
                         <h3 class="project-title">Carch</h3>
                         <p class="project-description">An automated script for quick & easy Linux system setup (Arch & Fedora) 🧩</p>
-                        <a href="https://github.com/harilvfs/carch" class="project-link" target="_blank">View Project</a>
+                        <a href="https://github.com/harilvfs/carch" class="project-link btn-3d" target="_blank">View Project</a>
                      </div>
                   </div>
-                  <div class="project-card">
+                  <div class="project-card tilt-effect">
                      <div class="project-icon">
                         <i class="fas fa-book"></i>
                      </div>
                      <div class="project-details">
                         <h3 class="project-title">Arch Wiki</h3>
                         <p class="project-description">Contributions to Arch Linux documentation and wiki resources.</p>
-                        <a href="https://github.com/harilfs/Arch-Wiki" class="project-link" target="_blank">View Project</a>
+                        <a href="https://github.com/harilfs/Arch-Wiki" class="project-link btn-3d" target="_blank">View Project</a>
                      </div>
                   </div>
-                  <div class="project-card">
+                  <div class="project-card tilt-effect">
                      <div class="project-icon">
                         <i class="fas fa-window-maximize"></i>
                      </div>
                      <div class="project-details">
                         <h3 class="project-title">DWM</h3>
                         <p class="project-description">Customized Dynamic Window Manager configuration for Linux.</p>
-                        <a href="https://github.com/harilvfs/dwm" class="project-link" target="_blank">View Project</a>
+                        <a href="https://github.com/harilvfs/dwm" class="project-link btn-3d" target="_blank">View Project</a>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="contact-form">
+            <div class="contact-form gradient-border">
                <form action="https://formspree.io/f/mjkbkgpz" method="POST" id="contactForm">
                   <div class="terminal-header-bar">
                      <div class="terminal-buttons">
@@ -182,29 +183,29 @@
                   </div>
                   <div class="form-group">
                      <label for="name">Name</label>
-                     <input type="text" id="name" name="name" placeholder="Your name" required>
+                     <input type="text" id="name" name="name" placeholder="Your name" required class="glow-focus">
                   </div>
                   <div class="form-group">
                      <label for="email">Email</label>
-                     <input type="email" id="email" name="email" placeholder="Your email" required>
+                     <input type="email" id="email" name="email" placeholder="Your email" required class="glow-focus">
                   </div>
                   <div class="form-group">
                      <label for="message">Message</label>
-                     <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                     <textarea id="message" name="message" placeholder="Your message" required class="glow-focus"></textarea>
                   </div>
-                  <button type="submit" id="submitForm">Send Message</button>
+                  <button type="submit" id="submitForm" class="btn-3d">Send Message</button>
                </form>
             </div>
-            <p class="email-contact">Or email me directly at: <a href="mailto:harilvfs@chalisehari.com.np">harilvfs@chalisehari.com.np</a></p>
+            <p class="email-contact">Or email me directly at: <a href="mailto:harilvfs@chalisehari.com.np" class="neon-text">harilvfs@chalisehari.com.np</a></p>
          </div>
          <div class="footer">
-            <p>&copy; 2025 Hari Chalise. All rights reserved. <span class="terminal-prompt">$</span> _</p>
+            <p>&copy; 2025 Hari Chalise. All rights reserved. <span class="terminal-prompt">$</span></p>
          </div>
-      </div>
       </div>
       <div class="scroll-top" id="scrollTop">
          <i class="fas fa-arrow-up"></i>
       </div>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script src="script.js"></script>
    </body>
 </html>

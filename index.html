@@ -171,6 +171,80 @@
                   </div>
                </div>
             </div>
+            
+            <div class="section" id="blog">
+               <h2><i class="fas fa-blog"></i> Blog</h2>
+               <div class="blog-controls">
+                  <div class="blog-search">
+                     <input type="text" id="blogSearch" placeholder="Search blogs..." class="glow-focus">
+                  </div>
+               </div>
+               
+               <div id="blogEditor" class="terminal-container" style="display: none;">
+                  <div class="terminal-header-bar">
+                     <div class="terminal-buttons">
+                        <span class="terminal-btn close"></span>
+                        <span class="terminal-btn minimize"></span>
+                        <span class="terminal-btn maximize"></span>
+                     </div>
+                     <div class="terminal-title">hari@archlinux: ~/blogs/new-post</div>
+                  </div>
+                  <div class="terminal-content">
+                     <div class="form-group">
+                        <label for="blogTitle">Title</label>
+                        <input type="text" id="blogTitle" placeholder="Blog title" class="glow-focus">
+                     </div>
+                     <div class="form-group">
+                        <label for="blogContent">Content (Markdown supported)</label>
+                        <textarea id="blogContent" placeholder="Write your blog post in Markdown..." class="glow-focus" rows="10"></textarea>
+                     </div>
+                     <div class="form-group">
+                        <label for="blogTags">Tags (comma separated)</label>
+                        <input type="text" id="blogTags" placeholder="linux, arch, bash..." class="glow-focus">
+                     </div>
+                     <div class="form-actions">
+                        <button id="saveBlogBtn" class="btn-3d">Save Post</button>
+                        <button id="cancelBlogBtn" class="btn-3d cancel">Cancel</button>
+                     </div>
+                     <div id="markdown-preview" class="markdown-preview"></div>
+                  </div>
+               </div>
+               
+               <div id="blogList" class="blog-list">
+                  <!-- Blog posts will be dynamically loaded here -->
+                  <div class="empty-blogs">
+                     <p>No blog posts available in the repository.</p>
+                  </div>
+               </div>
+               
+               <!-- Back button outside the terminal container -->
+               <a id="backToBlogsBtn" class="btn-3d" style="display: none;">
+                  <i class="fas fa-arrow-left"></i> Back
+               </a>
+               
+               <div id="blogPostView" class="blog-post-view terminal-container" style="display: none;">
+                  <div class="terminal-header-bar">
+                     <div class="terminal-buttons">
+                        <span class="terminal-btn close" id="closeBlogView"></span>
+                        <span class="terminal-btn minimize"></span>
+                        <span class="terminal-btn maximize"></span>
+                     </div>
+                     <div class="terminal-title" id="blogViewTitle">hari@archlinux: ~/blogs/post</div>
+                  </div>
+                  <div class="terminal-content">
+                     <div id="blogPostContent" class="blog-post-content"></div>
+                     <div class="blog-post-meta">
+                        <div id="blogPostTags" class="blog-tags"></div>
+                        <div id="blogPostDate" class="blog-date"></div>
+                     </div>
+                     <div class="blog-actions">
+                        <button id="editBlogBtn" class="btn-3d">Edit</button>
+                        <button id="deleteBlogBtn" class="btn-3d delete">Delete</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
             <div class="contact-form gradient-border">
                <form action="https://formspree.io/f/mjkbkgpz" method="POST" id="contactForm">
                   <div class="terminal-header-bar">
@@ -207,5 +281,6 @@
       </div>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script src="script.js"></script>
+      <script src="blog.js"></script>
    </body>
 </html>

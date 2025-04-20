@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 @import url('https://unpkg.com/aos@next/dist/aos.css');
@@ -962,16 +961,43 @@ button[type="submit"].loading::after {
 
 @media (max-width: 768px) {
     .skills-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .profile-pic {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Add mobile-specific styles for scroll-top button */
+    .scroll-top {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .scroll-top i {
+        font-size: 1.2rem;
+    }
+    
+    /* Disable animations on touch devices for better performance */
+    .scroll-top.animated {
+        animation: none;
+    }
+    
+    .scroll-top.animated i {
+        animation: none;
+    }
+    
+    /* Increase touch target size */
+    .scroll-top.clicked {
+        transform: scale(0.95);
+        transition: transform 0.2s ease;
     }
 }
 

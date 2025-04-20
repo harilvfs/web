@@ -76,23 +76,50 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollTopBtn.addEventListener('click', function() {
             this.classList.add('clicked');
             
-            setTimeout(() => {
-                this.classList.remove('clicked');
-            }, 300);
-            
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
+            
+            const completeReset = () => {
+                scrollTopBtn.classList.remove('clicked');
+                scrollTopBtn.classList.remove('hover');
+                
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        if (window.pageYOffset <= 300) {
+                            scrollTopBtn.classList.remove('show');
+                            scrollTopBtn.classList.remove('animated');
+                        } else {
+                            scrollTopBtn.classList.add('show');
+                            scrollTopBtn.classList.add('animated');
+                        }
+                    }, 50);
+                }
+            };
+            
+            setTimeout(completeReset, 1000);
+            
+            let scrollTimeout;
+            const scrollListener = function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    completeReset();
+                    window.removeEventListener('scroll', scrollListener);
+                }, 150);
+            };
+            window.addEventListener('scroll', scrollListener);
         });
         
-        scrollTopBtn.addEventListener('mouseenter', function() {
-            this.classList.add('hover');
-        });
-        
-        scrollTopBtn.addEventListener('mouseleave', function() {
-            this.classList.remove('hover');
-        });
+        if (window.matchMedia('(hover: hover)').matches) {
+            scrollTopBtn.addEventListener('mouseenter', function() {
+                this.classList.add('hover');
+            });
+            
+            scrollTopBtn.addEventListener('mouseleave', function() {
+                this.classList.remove('hover');
+            });
+        }
     }
     
     const skillBars = document.querySelectorAll('.skill-progress');

@@ -1,3 +1,10 @@
+name = "hari-portfolio"
+compatibility_date = "2024-04-26"  # (use today's date)
+
 [site]
-bucket = './build'
-entry-point = 'workers-site'
+bucket = "./dist"        # or "./build" if using CRA
+entry-point = "."         # main project directory
+
+[build]
+command = "bun run build"
+

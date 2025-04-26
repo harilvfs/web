@@ -9,7 +9,7 @@
 
 <img src="https://img.shields.io/badge/Made%20with%20❤️-React%20&%20TypeScript-ffd5ff?style=for-the-badge&color=ffd5ff&logoColor=61DAFB&labelColor=1c1c29&logo=react" alt="Badge" />
 
-<br>
+<br><br>
 
 [![github actions build status][check]][link]
 

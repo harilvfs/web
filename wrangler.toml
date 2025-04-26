@@ -1,23 +1,9 @@
 name = "hari-portfolio"
 compatibility_date = "2024-02-01"
 
-# Required configuration for Pages projects
-pages_build_output_dir = "build"
+main = ".svelte-kit/cloudflare/_worker.js"
+compatibility_date = "2024-02-01"
 
-# Build configuration 
-[build]
-command = "npm run build"
-cwd = "build_cwd"
-watch_dir = "build_watch_dir"
-
-# Enable Node.js compatibility
-compatibility_flags = ["nodejs_compat"]
-
-# Preview environment configuration
-[env.preview]
-# You can override settings for preview deployments
-# vars, bindings, etc. for preview environment
-
-# Production environment configuration
-[env.production]
-# You can override settings for production deployments
+workers_dev = false
+build = "bun run build"
+node_compat = true

@@ -1,0 +1,9 @@
+[install]
+exact = true
+production = false
+
+[test]
+coverage = true
+
+[run]
+script-runners = false 

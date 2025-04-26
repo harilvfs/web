@@ -9,14 +9,16 @@
 
 <h2>🛠️ Tech Stack</h2>
 <ul>
-  <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+  <li><strong>Frontend:</strong> React, TypeScript, Styled Components</li>
+  <li><strong>Backend:</strong> Node.js</li>
 </ul>
 
-## 📚 Setup Instructions (Python3)
+## 📚 Setup Instructions
 
 **Prerequisites:**
 
-* Ensure you have Git installed on your system. You can install it using the package manager. 
+* Git installed on your system
+* Node.js and npm (or bun) installed
 
 **Installation:**
 
@@ -32,40 +34,31 @@ git clone https://github.com/harilvfs/web.git
 cd web/
 ```
 
-- **Install Python3 (if not already installed):**
+- **Install dependencies:**
 
-   - **Arch Linux:**
-
-     ```bash
-     sudo pacman -S python
-     ```
-
-   - **Debian/Ubuntu:**
-
-     ```bash
-     sudo apt update
-     sudo apt install python3
-     ```
-
-   - **Fedora/CentOS:**
-
-     ```bash
-     sudo dnf install python3
-     ```
-
-   - **OpenSUSE:**
-
-     ```bash
-     sudo zypper install python3
-     ```
+```bash
+npm install
+# or if you use bun
+bun install
+```
 
 - **Run the development server:**
 
-   ```
-   python3 -m http.server 8000
-   ```
+```bash
+npm run start
+# or if you use bun
+bun run start
+```
 
-- **Open http://localhost:8000 in your browser** (or the port specified by the development server) to view the site.
+- **Open http://localhost:3000 in your browser** to view the site.
+
+- **To build for production:**
+
+```bash
+npm run build
+# or if you use bun
+bun run build
+```
 
 <br>
 

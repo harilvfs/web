@@ -2,4 +2,8 @@ name = "hari-portfolio"
 compatibility_date = "2023-12-01"
 
 # Specify the build output directory - required for Pages
-pages_build_output_dir = "build" 
+pages_build_output_dir = "build"
+
+# Build configuration
+[build]
+command = "bun run build" 

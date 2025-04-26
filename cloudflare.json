@@ -1,0 +1,7 @@
+{
+  "pages_build_output_dir": "build",
+  "build": {
+    "command": "bun run build",
+    "output_directory": "build"
+  }
+} 

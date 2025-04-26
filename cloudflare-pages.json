@@ -1,0 +1,13 @@
+{
+  "build": {
+    "command": "bun run build",
+    "output_directory": "build"
+  },
+  "routes": [
+    {
+      "pattern": "/*",
+      "script": "build/index.html",
+      "status": 200
+    }
+  ]
+} 

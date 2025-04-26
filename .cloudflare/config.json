@@ -1,0 +1,12 @@
+{
+  "build": {
+    "command": "bun run build",
+    "output_directory": "build"
+  },
+  "site": {
+    "bucket": "build"
+  },
+  "pages": {
+    "build_output_dir": "build"
+  }
+} 

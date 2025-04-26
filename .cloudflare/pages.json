@@ -1,0 +1,8 @@
+{
+  "pages_build_output_dir": "build",
+  "build": {
+    "command": "bun run build",
+    "output_directory": "build"
+  },
+  "compatibility_date": "2023-12-01"
+} 

@@ -1,15 +1,15 @@
 name = "hari-portfolio"
 compatibility_date = "2023-12-01"
 
+# Specify the build output directory explicitly - this is required for Pages
+pages_build_output_dir = "build"
+
 [build]
 command = "bun run build"
 
 [site]
 bucket = "build"
 
-[build.upload]
-format = "directory"
-dir = "build"
-
-# Pages specific config
-pages_build_output_dir = "build" 
+[env.production]
+name = "hari-portfolio"
+route = "*/*" 

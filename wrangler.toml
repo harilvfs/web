@@ -6,7 +6,9 @@ pages_build_output_dir = "build"
 
 # Build configuration 
 [build]
-command = "bun run build"
+command = "npm run build"
+cwd = "build_cwd"
+watch_dir = "build_watch_dir"
 
 # Enable Node.js compatibility
 compatibility_flags = ["nodejs_compat"]

@@ -1,0 +1,11 @@
+[build]
+command = "bun run build"
+output_directory = "build"
+
+[site]
+bucket = "build"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200 

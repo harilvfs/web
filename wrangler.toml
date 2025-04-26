@@ -3,4 +3,13 @@ compatibility_date = "2023-12-01"
 
 [build]
 command = "bun run build"
-output_directory = "build" 
+
+[site]
+bucket = "build"
+
+[build.upload]
+format = "directory"
+dir = "build"
+
+# Pages specific config
+pages_build_output_dir = "build" 

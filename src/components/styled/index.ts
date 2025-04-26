@@ -58,9 +58,10 @@ const float = keyframes`
 
 export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   /* Import high-quality developer-friendly fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
   * {
     margin: 0;
@@ -69,10 +70,11 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   body {
-    font-family: 'Fira Code', 'JetBrains Mono', monospace;
+    font-family: 'Inter', 'Fira Code', 'JetBrains Mono', sans-serif;
     background-color: ${({ theme }) => theme.base};
     color: ${({ theme }) => theme.subtext0};
     line-height: 1.6;
+    font-size: 0.95rem;
     overflow-x: hidden;
     transition: background-color 0.2s ease, color 0.2s ease;
     background-image: 
@@ -118,11 +120,36 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fira Code', 'JetBrains Mono', monospace;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5, h6 {
+    font-size: 1rem;
   }
 
   p, li, a, button, input, textarea {
+    font-family: 'Inter', sans-serif;
+  }
+
+  code, pre, .terminal-text {
     font-family: 'Fira Code', 'JetBrains Mono', monospace;
   }
 
@@ -297,9 +324,14 @@ export const ProfilePic = styled.div`
 export const UserName = styled.h1`
   color: ${({ theme }) => theme.text};
   margin-bottom: 0.5rem;
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  
+  .highlight {
+    color: ${({ theme }) => theme.blue};
+  }
   
   background: linear-gradient(135deg, ${({ theme }) => theme.blue} 0%, ${({ theme }) => theme.mauve} 100%);
   -webkit-background-clip: text;
@@ -520,27 +552,34 @@ export const Section = styled.section<{ visible: boolean }>`
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: ${({ theme }) => theme.text};
   display: flex;
   align-items: center;
   gap: 0.8rem;
   position: relative;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  
+  .highlight {
+    color: ${({ theme }) => theme.blue};
+  }
   
   &::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -10px;
     left: 0;
-    width: 40px;
+    width: 50px;
     height: 3px;
     background: linear-gradient(to right, ${({ theme }) => theme.blue}, ${({ theme }) => theme.mauve});
     border-radius: 2px;
   }
   
   @media (max-width: 576px) {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1.2rem;
     gap: 0.5rem;
   }
@@ -570,9 +609,10 @@ export const SectionContent = styled.p`
   color: ${({ theme }) => theme.subtext0};
   margin-bottom: 1rem;
   line-height: 1.8;
+  font-size: 0.95rem;
   
   @media (max-width: 576px) {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.7;
   }
 `;
@@ -663,7 +703,7 @@ export const TerminalTitle = styled.div`
 export const TerminalContent = styled.div`
   padding: 1rem;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.5;
   max-height: 400px;
   overflow-y: auto;
@@ -759,7 +799,7 @@ export const TimelineItem = styled.div`
 
 export const TimelineTitle = styled.h3`
   color: ${({ theme }) => theme.text};
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
 `;
 
@@ -891,13 +931,13 @@ export const ProjectDetails = styled.div`
 export const ProjectTitle = styled.h3`
   color: ${({ theme }) => theme.text};
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
 `;
 
 export const ProjectDescription = styled.p`
   color: ${({ theme }) => theme.subtext0};
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 1rem;
   flex: 1;
 `;
@@ -1167,7 +1207,7 @@ export const GlowingOrb = styled.div<{ position: string; color: string }>`
 `;
 
 export const ProfileBio = styled.p`
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.subtext0};
   margin: 1rem 0;
@@ -1300,6 +1340,7 @@ export const CursorFollower = styled.div`
       animation: rotate 2s linear infinite;
     }
     
+    
     @keyframes rotate {
       from {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -1313,4 +1354,9 @@ export const CursorFollower = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
+`;
+
+export const Highlight = styled.span`
+  color: ${({ theme }) => theme.blue};
+  font-weight: inherit;
 `; 

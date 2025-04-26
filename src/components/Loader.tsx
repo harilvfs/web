@@ -46,6 +46,11 @@ const TerminalContainer = styled.div`
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   width: 80%;
   max-width: 600px;
+  
+  @media (max-width: 576px) {
+    width: 90%;
+    padding: 15px;
+  }
 `;
 
 const TerminalHeader = styled.div`
@@ -71,11 +76,21 @@ const TerminalButton = styled.div`
   &:nth-child(3) {
     background-color: #27c93f;
   }
+  
+  @media (max-width: 576px) {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+  }
 `;
 
 const TerminalBody = styled.div`
   font-family: "Courier New", monospace;
   color: ${props => props.theme.text};
+  
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 const TypewriterText = styled.div`
@@ -87,6 +102,21 @@ const TypewriterText = styled.div`
   animation: 
     ${typing} 2s steps(40, end),
     ${blinkCaret} 0.75s step-end infinite;
+    
+  @media (max-width: 768px) {
+    letter-spacing: 0.1em;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 576px) {
+    white-space: normal;
+    animation: ${blinkCaret} 0.75s step-end infinite;
+    border-right: 2px solid transparent;
+    letter-spacing: 0.05em;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 8px 0;
+  }
 `;
 
 const Spinner = styled.div`
@@ -100,6 +130,13 @@ const Spinner = styled.div`
 
   @keyframes spin {
     to { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 576px) {
+    margin: 20px auto;
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
   }
 `;
 

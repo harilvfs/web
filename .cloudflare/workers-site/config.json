@@ -1,9 +1,0 @@
-{
-  "build": {
-    "command": "bun run build",
-    "upload": {
-      "format": "directory",
-      "directory": "build"
-    }
-  }
-} 

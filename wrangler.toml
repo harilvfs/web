@@ -1,9 +1,21 @@
 name = "hari-portfolio"
-compatibility_date = "2023-12-01"
+compatibility_date = "2024-02-01"
 
-# Specify the build output directory - required for Pages
+# Required configuration for Pages projects
 pages_build_output_dir = "build"
 
-# Build configuration
+# Build configuration 
 [build]
-command = "bun run build" 
+command = "bun run build"
+
+# Enable Node.js compatibility
+compatibility_flags = ["nodejs_compat"]
+
+# Preview environment configuration
+[env.preview]
+# You can override settings for preview deployments
+# vars, bindings, etc. for preview environment
+
+# Production environment configuration
+[env.production]
+# You can override settings for production deployments

@@ -8,6 +8,11 @@
 <div align="center">
 
 <img src="https://img.shields.io/badge/Made%20with%20❤️-React%20&%20TypeScript-ffd5ff?style=for-the-badge&color=ffd5ff&logoColor=61DAFB&labelColor=1c1c29&logo=react" alt="Badge" />
+
+<br>
+
+[![github actions build status][check]][link]
+
 </div>
 
 <!-- ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png) -->
@@ -75,3 +80,6 @@ bun run build
 <p align="center">
 	Copyright &copy; 2023-present <a href="https://github.com/harilvfs" target="_blank">Hari Chalise</a>
 </p>
+
+[check]: https://github.com/harilvfs/web/actions/workflows/deploy.yml/badge.svg
+[link]: https://github.com/harilvfs/web/actions/workflows/deploy.yml

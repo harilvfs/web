@@ -91,6 +91,10 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     cursor: default; /* Show a default cursor instead of hiding it */
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   html, body {
     cursor: default;
   }
@@ -200,6 +204,16 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     transition-property: background-color, border-color, color, fill, stroke;
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
+  }
+  
+  .mainContent {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .fadeIn, .animated {
+    will-change: opacity, transform;
   }
 `;
 
@@ -1239,7 +1253,7 @@ export const CursorFollower = styled.div`
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s;
-  z-index: 9998; /* Lower z-index to ensure it doesn't interfere with cursor interaction */
+  z-index: 9998;
   box-shadow: 0 0 12px 2px ${({ theme }) => theme.blue}15;
   border: 1px solid ${({ theme }) => theme.blue}22;
   mix-blend-mode: screen;

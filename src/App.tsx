@@ -10,6 +10,17 @@ import Contact from './components/Contact';
 import ScrollTop from './components/ScrollTop';
 import Loader from './components/Loader';
 
+const throttle = (fn: Function, delay: number) => {
+  let lastCall = 0;
+  return function(...args: any[]) {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      fn(...args);
+    }
+  };
+};
+
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [visibleSections, setVisibleSections] = useState({
@@ -62,10 +73,12 @@ const App: React.FC = () => {
     
     const timer = setTimeout(handleScroll, 300);
     
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    const throttledScrollHandler = throttle(handleScroll, 100);
+    
+    window.addEventListener('scroll', throttledScrollHandler, { passive: true });
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledScrollHandler);
     };
   }, [handleScroll, loading]);
 
@@ -91,7 +104,7 @@ const App: React.FC = () => {
             <Sidebar>
               <Profile />
             </Sidebar>
-            <MainContent>
+            <MainContent className="mainContent">
               <About visible={visibleSections.about} />
               <Experience visible={visibleSections.experience} />
               <Skills visible={visibleSections.skills} />

@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ScrollTop from './components/ScrollTop';
 import Loader from './components/Loader';
+import ProgressBar from './components/ProgressBar';
 
 const throttle = (fn: Function, delay: number) => {
   let lastCall = 0;
@@ -99,6 +100,7 @@ const App: React.FC = () => {
       {!loading && (
         <>
           {decorativeElements}
+          <ProgressBar />
           
           <Container>
             <Sidebar>

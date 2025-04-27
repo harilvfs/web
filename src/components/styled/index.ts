@@ -1187,6 +1187,30 @@ export const ScrollTop = styled.div<{ show: boolean }>`
   }
 `;
 
+export const ProgressBar = styled.div<{ progress: number }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, ${({ theme }) => theme.blue}, ${({ theme }) => theme.lavender});
+    transform: translateX(${({ progress }) => `${progress - 100}%`});
+    transition: transform 0.01s linear;
+  }
+`;
+
 export const GlowingOrb = styled.div<{ position: string; color: string }>`
   position: fixed;
   width: 250px;

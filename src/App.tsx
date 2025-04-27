@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { Container, Sidebar, MainContent, Footer, FooterTerminalPrompt, GlowingOrb } from './components/styled';
+import { Container, Sidebar, MainContent, Footer, FooterTerminalPrompt, GlowingOrb, CopyrightSection } from './components/styled';
 import ThemeProvider from './components/ThemeProvider';
 import Profile from './components/Profile';
 import About from './components/About';
@@ -114,10 +114,13 @@ const App: React.FC = () => {
               <Contact />
               
               <Footer>
-                <p>
-                  &copy; {currentYear} Hari Chalise. All rights reserved. 
-                  <FooterTerminalPrompt>$</FooterTerminalPrompt>
-                </p>
+                <CopyrightSection>
+                  <p>
+                    <img src={`${process.env.PUBLIC_URL}/aayush.png`} alt="Logo" className="footer-logo" />
+                    &copy; {currentYear} Hari Chalise. All rights reserved. 
+                    <FooterTerminalPrompt>$</FooterTerminalPrompt>
+                  </p>
+                </CopyrightSection>
               </Footer>
             </MainContent>
           </Container>

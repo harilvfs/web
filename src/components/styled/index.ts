@@ -1092,25 +1092,73 @@ export const SubmitButton = styled.button`
 export const EmailContact = styled.p`
   margin: 1.5rem 0;
   text-align: center;
-  padding: 1rem;
-  background-color: ${({ theme }) => theme.surface0};
-  border-radius: 8px;
+  padding: 1.5rem;
+  background: rgba(51, 65, 85, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
   word-break: break-word;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 0 15px rgba(56, 189, 248, 0.2),
+    inset 0 0 20px rgba(56, 189, 248, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(56, 189, 248, 0.1) 50%,
+      transparent 100%
+    );
+    transform: rotate(45deg);
+    animation: glossyShine 3s infinite linear;
+    pointer-events: none;
+  }
+
+  @keyframes glossyShine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
 
   a {
+    position: relative;
+    display: inline-block;
     color: ${({ theme }) => theme.blue};
     text-decoration: none;
-    transition: color 0.3s ease;
-    text-shadow: 0 0 5px rgba(137, 180, 250, 0.5);
-
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.15);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+    
     &:hover {
-      color: ${({ theme }) => theme.lavender};
-      text-decoration: underline;
+      color: #fff;
+      background: linear-gradient(135deg, ${({ theme }) => theme.blue} 0%, ${({ theme }) => theme.lavender} 100%);
+      transform: translateY(-2px);
+      box-shadow: 
+        0 5px 15px rgba(56, 189, 248, 0.4),
+        0 0 10px rgba(129, 140, 248, 0.3);
     }
   }
   
   @media (max-width: 576px) {
-    padding: 0.8rem;
+    padding: 1.2rem;
     font-size: 0.9rem;
     margin: 1rem 0;
   }
@@ -1155,10 +1203,88 @@ export const Footer = styled.div`
   z-index: 10;
 `;
 
+export const CopyrightSection = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.8rem;
+  background: rgba(51, 65, 85, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 0 15px rgba(56, 189, 248, 0.2),
+    inset 0 0 20px rgba(56, 189, 248, 0.05);
+  transition: all 0.3s ease;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(56, 189, 248, 0.1) 50%,
+      transparent 100%
+    );
+    transform: rotate(45deg);
+    animation: glossyShine 3s infinite linear;
+    pointer-events: none;
+  }
+  
+  p {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: ${({ theme }) => theme.text};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-logo {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    object-fit: cover;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+    
+    .footer-logo {
+      height: 20px;
+      width: 20px;
+    }
+  }
+`;
+
 export const FooterTerminalPrompt = styled.span`
-  color: ${({ theme }) => theme.mauve};
+  color: ${({ theme }) => theme.blue};
   font-family: 'Fira Code', monospace;
   animation: ${blink} 1s infinite;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
 `;
 
 export const ScrollTop = styled.div<{ show: boolean }>`

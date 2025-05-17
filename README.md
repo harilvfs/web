@@ -11,12 +11,6 @@
 
 </div>
 
-<div align="center">
-
-[![github actions build status][check]][link]
-
-</div>
-
 <!-- ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png) -->
 
 <h2>🛠️ Tech Stack</h2>
@@ -82,6 +76,3 @@ bun run build
 <p align="center">
 	Copyright &copy; 2023-present <a href="https://github.com/harilvfs" target="_blank">Hari Chalise</a>
 </p>
-
-[check]: https://github.com/harilvfs/web/actions/workflows/deploy.yml/badge.svg
-[link]: https://github.com/harilvfs/web/actions/workflows/deploy.yml

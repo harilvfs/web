@@ -35,7 +35,3 @@ bun run build
 ## License
 
 MIT License — check out the [LICENSE](https://github.com/harilvfs/blog-site/blob/main/LICENSE) file if you’re curious.
-
-<p align="center">
-	Copyright &copy; 2023-present <a href="https://github.com/harilvfs" target="_blank">Hari Chalise</a>
-</p>

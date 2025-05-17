@@ -16,11 +16,11 @@ export const userData = {
   about: [
     {
       command: 'whoami',
-      text: "I'm Hari Chalise, a Linux enthusiast specializing in Bash scripting and passionate about open source. I've been actively contributing to the Linux community for over a year, particularly within the Arch Linux ecosystem, where I focus on creating efficient and customized solutions."
+      text: "I'm Hari Chalise — a full-on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with open source. Been contributing to the Linux world for over a year now, mostly in the Arch ecosystem, where I tweak and break things for fun and learning."
     },
     {
       command: 'cat journey.txt',
-      text: "My tech journey began with a fascination for Linux, leading me to explore system management and kernel customization. I'm proficient in Bash scripting and am currently learning Rust. I'm excited by its potential for building secure and efficient systems."
+      text: "I got into Linux out of pure curiosity. That turned into a habit of tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm solid with Bash and now learning Rust — it feels like a good fit for building solid, fast tools."
     }
   ],
   email: 'harilvfs@chalisehari.com.np'
@@ -64,19 +64,19 @@ export const experiences: Experience[] = [
     title: 'Bash Scripting Specialist',
     command: '~/scripts$ ./automation.sh --optimize',
     date: '2023 - Present',
-    description: 'Creating efficient automation solutions and optimizing system performance.'
+    description: 'Writing efficient Bash scripts to automate tasks. Breaking stuff, fixing it, and learning in the process.'
   },
   {
-    title: 'Linux Tools Development',
+    title: 'Linux Tools Developer',
     command: '~/dev$ make install',
     date: '2022 - Present',
-    description: 'System optimization across various distributions with Arch Linux expertise.'
+    description: 'Building and tweaking tools across various Linux distros, with a soft spot for Arch. Kernel tuning and system-level customization are part of the game.'
   },
   {
-    title: 'Design Work',
+    title: 'Casual Designer',
     command: '~/design$ inkscape project.svg',
     date: '2021 - Present',
-    description: 'Creating visuals and layout design.'
+    description: 'Messing around with layout and visuals — just enough design to get by, all done without touching Adobe stuff.'
   }
 ];
 
@@ -104,7 +104,7 @@ export const skills: Skill[] = [
   {
     name: 'System Administration',
     icon: 'FaServer',
-    progress: 85
+    progress: 65
   },
   {
     name: 'Networking',
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     title: 'Carch',
     icon: 'FaLaptopCode',
-    description: 'An automated script for quick & easy Linux system setup (Arch & Fedora) 🧩',
+    description: 'A Simple Script to Make Linux System Setup Easier 🧩',
     link: 'https://github.com/harilvfs/carch'
   },
   {
@@ -150,4 +150,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const skillsDescription = 'Technical specialist with focus on practical skills over formal education, with continuous learning in open-source technology. Background includes Computer Management education with emphasis on hands-on technical experience and solving complex problems with elegant solutions.';
+export const skillsDescription = 'I’m quite familiar with Linux environments. I occasionally contribute to some projects and have a decent understanding of Bash scripting — I actually enjoy working with it, back and forth. Rust holds a small spot in my brain, but I really like it. As for other skills, they;re mostly for showcase; I’m not an expert in them. I know the basics of Photoshop, but yeah — I use Linux and don’t want to see any f*cking Adobe software here. I also do performance tuning with various kernels, somewhat customized — often to the point where I break things every time. Yeah, learning curve.';

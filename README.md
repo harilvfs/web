@@ -19,59 +19,22 @@
   <li><strong>Backend:</strong> Node.js</li>
 </ul>
 
-## 📚 Setup Instructions
-
-**Prerequisites:**
-
-* Git installed on your system
-* Node.js and npm (or bun) installed
-
-**Installation:**
-
-- **Clone the repository:**
+## Quick Start
 
 ```bash
-git clone https://github.com/harilvfs/web.git
-```
-
-- **Navigate to the project directory:**
-
-```bash
-cd web/
-```
-
-- **Install dependencies:**
-
-```bash
-npm install
-# or if you use bun
+# Install everything you need
 bun install
-```
 
-- **Run the development server:**
+# Start the dev server
+bun start
 
-```bash
-npm run start
-# or if you use bun
-bun run start
-```
-
-- **Open http://localhost:3000 in your browser** to view the site.
-
-- **To build for production:**
-
-```bash
-npm run build
-# or if you use bun
+# Make a production build
 bun run build
 ```
 
-<br>
+## License
 
-<h2>✨ Contribution</h2>
-<p>Feel free to fork this project, create a new branch, and submit a pull request with your enhancements. All kinds of contributions are welcome!</p>
-
-<br>
+MIT License — check out the [LICENSE](https://github.com/harilvfs/blog-site/blob/main/LICENSE) file if you’re curious.
 
 <p align="center">
 	Copyright &copy; 2023-present <a href="https://github.com/harilvfs" target="_blank">Hari Chalise</a>

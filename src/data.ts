@@ -133,7 +133,7 @@ export const projects: Project[] = [
   {
     title: 'Arch Wiki',
     icon: 'FaBook',
-    description: 'Contributions to Arch Linux documentation and wiki resources.',
+    description: 'OCD-Edition: Arch Linux Installation Note.',
     link: 'https://github.com/harilfs/Arch-Wiki'
   },
   {
@@ -150,4 +150,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const skillsDescription = 'Technical specialist with focus on practical skills over formal education, with continuous learning in open-source technology. Background includes Computer Management education with emphasis on hands-on technical experience and solving complex problems with elegant solutions.'; 
+export const skillsDescription = 'Technical specialist with focus on practical skills over formal education, with continuous learning in open-source technology. Background includes Computer Management education with emphasis on hands-on technical experience and solving complex problems with elegant solutions.';

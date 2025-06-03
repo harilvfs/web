@@ -7,7 +7,7 @@ export const userData = {
   name: 'Hari Chalise',
   location: 'Kathmandu, Nepal',
   profilePic: `${process.env.PUBLIC_URL}/aayush.png`,
-  shortBio: 'Linux enthusiast & Bash scripting specialist with a passion for open source and system optimization.',
+  shortBio: 'Linux enthusiast & Bash scripting specialist with a big love 💖 for open source.',
   distros: [
     { name: 'Arch', icon: FaLinux },
     { name: 'Debian', icon: FaLinux },
@@ -16,11 +16,11 @@ export const userData = {
   about: [
     {
       command: 'whoami',
-      text: "I'm Hari Chalise — a full-on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with open source. Been contributing to the Linux world for over a year now, mostly in the Arch ecosystem, where I tweak and break things for fun and learning."
+      text: "I'm Hari Chalise a full on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with open source. Been contributing to the Linux community for over a year now, mostly in the Arch ecosystem, where I tweak and break things for kinda fun and learning."
     },
     {
       command: 'cat journey.txt',
-      text: "I got into Linux out of pure curiosity. That turned into a habit of tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm solid with Bash and now learning Rust — it feels like a good fit for building solid, fast tools."
+      text: "I got into Linux out of pure curiosity. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm little proficient with Bash and now learning Rust it feels like a good fit for building simple and fast cli tools."
     }
   ],
   email: 'harilvfs@chalisehari.com.np'
@@ -64,19 +64,25 @@ export const experiences: Experience[] = [
     title: 'Bash Scripting Specialist',
     command: '~/scripts$ ./automation.sh --optimize',
     date: '2023 - Present',
-    description: 'Writing efficient Bash scripts to automate tasks. Breaking stuff, fixing it, and learning in the process.'
+    description: 'Writing Bash scripts to automate tasks. Breaking stuff, fixing it, and learning in the process.'
+  },
+  {
+    title: 'Linux CLI Tool Developer',
+    command: '~/cli$ cargo build --release',
+    date: '2024 - Present',
+    description: 'Making fast and simple command line tools using Rust and Cargo.'
   },
   {
     title: 'Linux Tools Developer',
     command: '~/dev$ make install',
-    date: '2022 - Present',
-    description: 'Building and tweaking tools across various Linux distros, with a soft spot for Arch. Kernel tuning and system-level customization are part of the game.'
+    date: '2023 - Present',
+    description: 'Building and tweaking tools across various Linux distros.'
   },
   {
     title: 'Casual Designer',
     command: '~/design$ inkscape project.svg',
     date: '2021 - Present',
-    description: 'Messing around with layout and visuals — just enough design to get by, all done without touching Adobe stuff.'
+    description: 'Sometimes I do make style banner logo and many more not best but usable.'
   }
 ];
 
@@ -150,4 +156,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const skillsDescription = 'I’m quite familiar with Linux environments. I occasionally contribute to some projects and have a decent understanding of Bash scripting — I actually enjoy working with it, back and forth. Rust holds a small spot in my brain, but I really like it. As for other skills, they;re mostly for showcase; I’m not an expert in them. I know the basics of Photoshop, but yeah — I use Linux and don’t want to see any f*cking Adobe software here. I also do performance tuning with various kernels, somewhat customized — often to the point where I break things every time. Yeah, learning curve.';
+export const skillsDescription = 'I’m quite familiar with Linux environments. I occasionally contribute to some projects and have a decent understanding of Bash scripting I actually enjoy working with it, back and forth. I love Rust (btw) not because of the trend, but because I love how fast CLI tools or anything we make can be. As for other skills, they;re mostly for showcase; I’m not an expert in them. I know the basics of Photoshop, but yeah I use Linux and don’t want to see any f*cking Adobe software here. I also do performance tuning with various kernels, somewhat customized often to the point where I break things every time. Yeah, learning curve.';

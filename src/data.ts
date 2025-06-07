@@ -139,7 +139,7 @@ export const projects: Project[] = [
   {
     title: 'Arch Wiki',
     icon: 'FaBook',
-    description: 'OCD-Edition: Arch Linux Installation Note.',
+    description: 'Arch Wiki - OCD Edition ( Arch Linux Installation Guide )',
     link: 'https://github.com/harilfs/Arch-Wiki'
   },
   {

@@ -34,4 +34,4 @@ bun run build
 
 ## License
 
-MIT License — check out the [LICENSE](https://github.com/harilvfs/blog-site/blob/main/LICENSE) file if you’re curious.
+[MIT License](https://github.com/harilvfs/blog-site/blob/main/LICENSE)

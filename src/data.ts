@@ -133,7 +133,7 @@ export const projects: Project[] = [
   {
     title: 'Carch',
     icon: 'FaLaptopCode',
-    description: 'A simple CLI tool to automate Linux system setup 🧩',
+    description: 'A simple Rust-based CLI tool (built with Ratatui) to streamline and automate your Linux system’s initial setup 🧩',
     link: 'https://github.com/harilvfs/carch'
   },
   {

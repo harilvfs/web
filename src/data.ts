@@ -7,7 +7,7 @@ export const userData = {
   name: 'Hari Chalise',
   location: 'Kathmandu, Nepal',
   profilePic: `${process.env.PUBLIC_URL}/aayush.png`,
-  shortBio: 'Linux enthusiast & Bash scripting specialist with a big love 💖 for open source.',
+  shortBio: 'Linux enthusiast & Bash scripting specialist with a big love 💖 for OSS.',
   distros: [
     { name: 'Arch', icon: FaLinux },
     { name: 'Debian', icon: FaLinux },
@@ -16,11 +16,11 @@ export const userData = {
   about: [
     {
       command: 'whoami',
-      text: "I'm Hari Chalise a full on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with open source. Been contributing to the Linux community for over a year now, mostly in the Arch ecosystem, where I tweak and break things for kinda fun and learning."
+      text: "I'm Hari Chalise a full on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with OSS. I've been contributing to the Linux community for over a year now, mostly in the Arch Linux community (arch btw), where I tweak and break things for kinda fun (btw, not for fun) and learning."
     },
     {
       command: 'cat journey.txt',
-      text: "I got into Linux out of pure curiosity. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm little proficient with Bash and now learning Rust it feels like a good fit for building simple and fast cli tools."
+      text: "I 'got' into Linux because of fuc*ing Microsoft shenanigans that they are doing on Windows (ewwindow). I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with Bash and now learning Rust(btw). Currently, I kinda have my eyes on the web development side (still, I'm a total noob there)."
     }
   ],
   email: 'harilvfs@chalisehari.com.np'
@@ -70,7 +70,7 @@ export const experiences: Experience[] = [
     title: 'Linux CLI Tool Developer',
     command: '~/cli$ cargo build --release',
     date: '2024 - Present',
-    description: 'Making fast and simple command line tools using Rust and Cargo.'
+    description: 'Making fast and simple command line tools using Rust(btw).'
   },
   {
     title: 'Linux Tools Developer',
@@ -156,4 +156,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const skillsDescription = 'I’m quite familiar with Linux environments. I occasionally contribute to some projects and have a decent understanding of Bash scripting I actually enjoy working with it, back and forth. I love Rust (btw) not because of the trend, but because I love how fast CLI tools or anything we make can be. As for other skills, they;re mostly for showcase; I’m not an expert in them. I know the basics of Photoshop, but yeah I use Linux and don’t want to see any f*cking Adobe software here. I also do performance tuning with various kernels, somewhat customized often to the point where I break things every time. Yeah, learning curve.';
+export const skillsDescription = 'I’m quite familiar with Linux environments. I occasionally contribute to some projects and have a decent understanding of Bash scripting I actually enjoy working with it, back & forth. I love Rust (btw) not because of the (rewritting the whole universe in rust "trend"), but because I love how fast CLI tools or anything we make can be. As for other skills, they;re mostly for showcase; I’m not an expert in them. I know the basics of Photoshop, but yeah I use Linux and don’t want to see any f*cking Adobe software here. I also do performance tuning with various kernels, somewhat customized often to the point where I break things every time. Yeah, learning curve.';

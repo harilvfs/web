@@ -20,7 +20,7 @@ export const userData = {
     },
     {
       command: 'cat journey.txt',
-      text: "I 'got' into Linux because of fuc*ing Microsoft shenanigans that they are doing on Windows (ewwindow). I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with Bash and now learning Rust(btw). Currently, I kinda have my eyes on the web development side (still, I'm a total noob there)."
+      text: "I 'got' into Linux because of fuc*ing Microsoft shenanigans that they are doing with Windows & choosing Linux has been the best decision I have ever made in my life. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with Bash and now learning Rust(btw)."
     }
   ],
   email: 'harilvfs@chalisehari.com.np'

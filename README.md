@@ -13,12 +13,6 @@
 
 <!-- ![Desktop Demo](https://github.com/harilvfs/web/blob/main/website%20preview/web.png) -->
 
-<h2>🛠️ Tech Stack</h2>
-<ul>
-  <li><strong>Frontend:</strong> React, TypeScript, Styled Components</li>
-  <li><strong>Backend:</strong> Node.js</li>
-</ul>
-
 ## Quick Start
 
 ```bash

@@ -1093,45 +1093,16 @@ export const EmailContact = styled.p`
   margin: 1.5rem 0;
   text-align: center;
   padding: 1.5rem;
-  background: rgba(51, 65, 85, 0.6);
-  backdrop-filter: blur(10px);
+  background: ${({ theme }) => theme.glass.background};
+  backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
+  -webkit-backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
   border-radius: 16px;
   word-break: break-word;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.15),
-    0 0 15px rgba(56, 189, 248, 0.2),
-    inset 0 0 20px rgba(56, 189, 248, 0.05);
+  border: ${({ theme }) => theme.glass.border};
+  box-shadow: ${({ theme }) => theme.glass.boxShadow};
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      transparent 0%,
-      rgba(56, 189, 248, 0.1) 50%,
-      transparent 100%
-    );
-    transform: rotate(45deg);
-    animation: glossyShine 3s infinite linear;
-    pointer-events: none;
-  }
-
-  @keyframes glossyShine {
-    0% {
-      transform: translateX(-100%) rotate(45deg);
-    }
-    100% {
-      transform: translateX(100%) rotate(45deg);
-    }
-  }
 
   a {
     position: relative;
@@ -1144,17 +1115,6 @@ export const EmailContact = styled.p`
     margin-left: 0.5rem;
     border-radius: 8px;
     background: rgba(56, 189, 248, 0.15);
-    transition: all 0.3s ease;
-    text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
-    
-    &:hover {
-      color: #fff;
-      background: linear-gradient(135deg, ${({ theme }) => theme.blue} 0%, ${({ theme }) => theme.lavender} 100%);
-      transform: translateY(-2px);
-      box-shadow: 
-        0 5px 15px rgba(56, 189, 248, 0.4),
-        0 0 10px rgba(129, 140, 248, 0.3);
-    }
   }
   
   @media (max-width: 576px) {
@@ -1208,35 +1168,15 @@ export const CopyrightSection = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1rem 1.8rem;
-  background: rgba(51, 65, 85, 0.6);
-  backdrop-filter: blur(10px);
+  background: ${({ theme }) => theme.glass.background};
+  backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
+  -webkit-backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.15),
-    0 0 15px rgba(56, 189, 248, 0.2),
-    inset 0 0 20px rgba(56, 189, 248, 0.05);
+  border: ${({ theme }) => theme.glass.border};
+  box-shadow: ${({ theme }) => theme.glass.boxShadow};
   transition: all 0.3s ease;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      transparent 0%,
-      rgba(56, 189, 248, 0.1) 50%,
-      transparent 100%
-    );
-    transform: rotate(45deg);
-    animation: glossyShine 3s infinite linear;
-    pointer-events: none;
-  }
   
   p {
     font-weight: 500;
@@ -1256,12 +1196,6 @@ export const CopyrightSection = styled.div`
     object-fit: cover;
     border: 1px solid rgba(56, 189, 248, 0.3);
     box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
-    }
   }
   
   @media (max-width: 576px) {

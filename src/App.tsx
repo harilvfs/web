@@ -35,7 +35,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5500);
+    }, 2500);
     
     return () => clearTimeout(timer);
   }, []);

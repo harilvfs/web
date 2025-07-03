@@ -10,17 +10,7 @@ import Contact from './components/Contact';
 import ScrollTop from './components/ScrollTop';
 import Loader from './components/Loader';
 import ProgressBar from './components/ProgressBar';
-
-const throttle = (fn: Function, delay: number) => {
-  let lastCall = 0;
-  return function(...args: any[]) {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      fn(...args);
-    }
-  };
-};
+import { throttle } from './utils';
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -58,27 +48,24 @@ const App: React.FC = () => {
       );
     };
 
-    requestAnimationFrame(() => {
-      setVisibleSections({
-        about: isInViewport(about),
-        experience: isInViewport(experience),
-        skills: isInViewport(skills),
-        projects: isInViewport(projects),
-        contact: isInViewport(contact),
-      });
+    setVisibleSections({
+      about: isInViewport(about),
+      experience: isInViewport(experience),
+      skills: isInViewport(skills),
+      projects: isInViewport(projects),
+      contact: isInViewport(contact),
     });
   }, [loading]);
 
   useEffect(() => {
     if (loading) return;
     
-    const timer = setTimeout(handleScroll, 300);
+    handleScroll();
     
     const throttledScrollHandler = throttle(handleScroll, 100);
     
     window.addEventListener('scroll', throttledScrollHandler, { passive: true });
     return () => {
-      clearTimeout(timer);
       window.removeEventListener('scroll', throttledScrollHandler);
     };
   }, [handleScroll, loading]);
@@ -131,4 +118,4 @@ const App: React.FC = () => {
   );
 };
 
-export default React.memo(App);
+export default App;

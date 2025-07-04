@@ -9,6 +9,16 @@ body {
   font-size: 0.95rem;
 }
 
+::-moz-selection {
+  color: #0f172a;
+  background: #209fb5			;
+}
+
+::selection {
+  color: #0f172a;
+  background: #209fb5		;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -40,7 +40,7 @@ const Profile: React.FC = () => {
         <FaMapMarkerAlt /> {userData.location}
       </UserLocation>
       
-      <ProfileBio>{userData.shortBio}</ProfileBio>
+      <ProfileBio dangerouslySetInnerHTML={{ __html: userData.shortBio }} />
       
       <DistroIcons>
         {userData.distros.map((distro, index) => (

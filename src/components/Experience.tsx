@@ -27,7 +27,7 @@ const Experience: React.FC<ExperienceProps> = ({ visible = true }) => {
             <TimelineTitle>{exp.title}</TimelineTitle>
             <TerminalCmd>{exp.command}</TerminalCmd>
             <TimelineDate>{exp.date}</TimelineDate>
-            <p>{exp.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: exp.description }}></p>
           </TimelineItem>
         ))}
       </Timeline>

@@ -16,11 +16,11 @@ export const userData = {
   about: [
     {
       command: 'whoami',
-      text: "I'm Hari Chalise a full on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with OSS. I've been contributing to the Linux community for over a year now, mostly in the Arch Linux community (arch btw), where I tweak and break things for kinda fun (btw, not for fun) and learning."
+      text: "I'm Hari Chalise a full on Linux fanboy. I live in the terminal, love writing Bash scripts, and enjoy messing with OSS. I've been contributing to the Linux community for over a year now, mostly in the <strong><i>Arch Linux</i></strong> community <b><i>(arch btw)</b></i>, where I tweak and break things for kinda fun (btw, <i>not for fun<i>) and learning."
     },
     {
       command: 'cat journey.txt',
-      text: "I 'got' into Linux because of fuc*ing Microsoft shenanigans that they are doing with Windows & choosing Linux has been the best decision I have ever made in my life. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with Bash and now learning Rust(btw)."
+      text: "I <b>got</b> into Linux because of <i>fuc*ing</i> Microsoft shenanigans that they are doing with <b>Windows</b> & choosing <b>Linux</b> has been the best decision I have ever made in my life. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with <i>Bash</i> and now learning <i>Rust(btw)</i>."
     }
   ],
   email: 'harilvfs@chalisehari.com.np'
@@ -151,4 +151,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const skillsDescription = 'I’m quite familiar with Linux environments. I occasionally contribute to some projects and have a decent understanding of Bash scripting I actually enjoy working with it, back & forth. I love Rust (btw) not because of the (rewritting the whole universe in rust "trend"), but because I love how fast CLI tools or anything we make can be. As for other skills, they;re mostly for showcase; I’m not an expert in them. I know the basics of Photoshop, but yeah I use Linux and don’t want to see any f*cking Adobe software here. I also do performance tuning with various kernels, somewhat customized often to the point where I break things every time. Yeah, learning curve.';
+export const skillsDescription = 'I’m quite familiar with <b>Linux environments</b>. I occasionally contribute to some projects and have a decent understanding of Bash scripting I actually enjoy working with it, back & forth. I love <i>Rust (btw)</i> <b>not</b> because of the <i>`rewritting the whole universe in rust <b>trend`</b></i>, but because I love how fast CLI tools or anything we can make.<br><br> As for other skills, they are mostly for showcase, I’m not an expert in them. I know the basics of Photoshop, but yeah I use Linux and don’t want to see any <i>f*cking</i> Adobe software here. I also do performance tuning with various kernels, somewhat customized often to the point where I break things every time.';

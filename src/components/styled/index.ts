@@ -624,8 +624,8 @@ export const SectionContent = styled.p`
   margin-bottom: 1rem;
   line-height: 1.8;
   font-size: 0.95rem;
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 500;
   
   @media (max-width: 576px) {
     font-size: 0.85rem;
@@ -1313,7 +1313,7 @@ export const ProfileBio = styled.p`
   margin: 1rem 0;
   max-width: 300px;
   text-align: center;
-  font-style: italic;
+  font-style: normal;
 `;
 
 export const ProfileBadge = styled.div`

@@ -65,7 +65,7 @@ const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 
               {typedCommands.includes(index) ? (
                 <>
                   <TerminalLine>{cmd.command}</TerminalLine>
-                  <TerminalText>{cmd.text}</TerminalText>
+                  <TerminalText dangerouslySetInnerHTML={{ __html: cmd.text }} />
                 </>
               ) : (
                 typedCommands.length === index ? (

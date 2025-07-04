@@ -55,7 +55,7 @@ const Skills: React.FC<SkillsProps> = ({ visible = true }) => {
       <SectionTitle>
         <FaCogs size={20} /> Skills
       </SectionTitle>
-      <SectionContent>{skillsDescription}</SectionContent>
+      <SectionContent dangerouslySetInnerHTML={{ __html: skillsDescription }} />
       <SkillsContainer>
         {skills.map((skill, index) => (
           <SkillCard key={index}>

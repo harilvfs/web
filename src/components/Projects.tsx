@@ -35,7 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ visible = true }) => {
             <ProjectIcon>{iconMap[project.icon]}</ProjectIcon>
             <ProjectDetails>
               <ProjectTitle>{project.title}</ProjectTitle>
-              <ProjectDescription>{project.description}</ProjectDescription>
+              <ProjectDescription dangerouslySetInnerHTML={{ __html: project.description }} />
               <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
                 View Project
               </ProjectLink>

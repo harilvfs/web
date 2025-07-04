@@ -624,6 +624,8 @@ export const SectionContent = styled.p`
   margin-bottom: 1rem;
   line-height: 1.8;
   font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
   
   @media (max-width: 576px) {
     font-size: 0.85rem;
@@ -1455,6 +1457,9 @@ export const CursorFollower = styled.div`
 `;
 
 export const Highlight = styled.span`
-  color: ${({ theme }) => theme.blue};
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.blue}33;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
   font-weight: inherit;
 `; 

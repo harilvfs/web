@@ -72,12 +72,7 @@ export const experiences: Experience[] = [
     date: '2024 - Present',
     description: 'Making fast and simple command line tools using Rust(btw).'
   },
-  {
-    title: 'Linux Tools Developer',
-    command: '~/dev$ make install',
-    date: '2023 - Present',
-    description: 'Building and tweaking tools across various Linux distros.'
-  },
+  
   {
     title: 'Casual Designer',
     command: '~/design$ inkscape project.svg',

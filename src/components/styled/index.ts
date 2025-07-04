@@ -88,7 +88,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    cursor: default; /* Show a default cursor instead of hiding it */
+    cursor: default;
   }
   
   html {
@@ -100,7 +100,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
   
   a, button, input, textarea, select, label {
-    cursor: pointer; /* Show pointer cursor for interactive elements */
+    cursor: pointer;
   }
   
   @media (max-width: 768px) {
@@ -221,19 +221,20 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 100vh;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
   will-change: transform;
   transform: translateZ(0);
 
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    padding: 1.5rem;
   }
   
   @media (max-width: 576px) {
-    padding: 0.5rem;
-    gap: 1.5rem;
+    padding: 1rem;
+    gap: 2rem;
   }
 `;
 
@@ -241,11 +242,11 @@ export const Sidebar = styled.div`
   background-color: ${({ theme }) => theme.glass.background};
   border: ${({ theme }) => theme.glass.border};
   box-shadow: ${({ theme }) => theme.glass.boxShadow};
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 18px;
+  padding: 2.5rem;
   position: sticky;
-  top: 1rem;
-  height: calc(100vh - 2rem);
+  top: 2rem;
+  height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -264,13 +265,13 @@ export const Sidebar = styled.div`
   @media (max-width: 992px) {
     position: relative;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
     top: 0;
   }
   
   @media (max-width: 576px) {
-    padding: 1.5rem 1rem;
-    border-radius: 12px;
+    padding: 1.8rem 1.2rem;
+    border-radius: 14px;
   }
 `;
 
@@ -282,20 +283,20 @@ export const SidebarContent = styled.div`
 `;
 
 export const MainContent = styled.div`
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 900px;
   will-change: transform;
   transform: translateZ(0);
 
   @media (max-width: 992px) {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
   }
   
   @media (max-width: 576px) {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 `;
 
@@ -307,18 +308,18 @@ export const ProfilePic = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.8rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 0 0 4px ${({ theme }) => theme.blue}, 
               0 0 20px rgba(56, 189, 248, 0.5);
   animation: ${float} 6s ease-in-out infinite;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 0 0 4px ${({ theme }) => theme.sky}, 
-                0 0 30px rgba(56, 189, 248, 0.7);
+                0 0 25px rgba(56, 189, 248, 0.6);
   }
 
   img {
@@ -566,15 +567,15 @@ export const Section = styled.section<{ visible: boolean }>`
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
   color: ${({ theme }) => theme.text};
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
   position: relative;
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   line-height: 1.2;
   
   .highlight {
@@ -584,18 +585,18 @@ export const SectionTitle = styled.h2`
   &::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     left: 0;
-    width: 50px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background: linear-gradient(to right, ${({ theme }) => theme.blue}, ${({ theme }) => theme.mauve});
     border-radius: 2px;
   }
   
   @media (max-width: 576px) {
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    gap: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    gap: 0.8rem;
   }
 `;
 
@@ -635,10 +636,10 @@ export const SectionContent = styled.p`
 
 export const TerminalContainer = styled.div`
   width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
+  margin-bottom: 2rem;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
   background-color: ${({ theme }) => theme.glass.background};
   border: ${({ theme }) => theme.glass.border};
   box-shadow: ${({ theme }) => theme.glass.boxShadow};
@@ -1031,48 +1032,50 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 4px;
+  padding: 0.9rem;
+  border-radius: 6px;
   border: 1px solid ${({ theme }) => theme.surface1};
   background-color: ${({ theme }) => theme.mantle};
   color: ${({ theme }) => theme.text};
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.blue};
-    box-shadow: 0 0 0 2px rgba(137, 180, 250, 0.5);
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.blue}44;
   }
   
   @media (max-width: 576px) {
-    padding: 0.6rem;
-    font-size: 0.9rem;
+    padding: 0.7rem;
+    font-size: 0.85rem;
   }
 `;
 
 export const FormTextArea = styled.textarea`
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 4px;
+  padding: 0.9rem;
+  border-radius: 6px;
   border: 1px solid ${({ theme }) => theme.surface1};
   background-color: ${({ theme }) => theme.mantle};
   color: ${({ theme }) => theme.text};
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
-  min-height: 120px;
+  min-height: 140px;
   resize: vertical;
+  font-size: 0.95rem;
 
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.blue};
-    box-shadow: 0 0 0 2px rgba(137, 180, 250, 0.5);
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.blue}44;
   }
   
   @media (max-width: 576px) {
-    padding: 0.6rem;
-    min-height: 100px;
-    font-size: 0.9rem;
+    padding: 0.7rem; 
+    min-height: 120px;
+    font-size: 0.85rem;
   }
 `;
 
@@ -1080,17 +1083,17 @@ export const SubmitButton = styled.button`
   background-color: ${({ theme }) => theme.blue};
   color: ${({ theme }) => theme.crust};
   border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 
   &:hover {
     background-color: ${({ theme }) => theme.lavender};
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
   }
   
   &:disabled {
@@ -1102,7 +1105,7 @@ export const SubmitButton = styled.button`
   }
   
   @media (max-width: 576px) {
-    padding: 0.7rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     width: 100%;
     font-size: 0.9rem;
   }
@@ -1292,12 +1295,12 @@ export const ProgressBar = styled.div<{ progress: number }>`
 
 export const GlowingOrb = styled.div<{ position: string; color: string }>`
   position: fixed;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(90px);
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.25;
   
   ${({ position, theme, color }) => {
     const colors = {
@@ -1309,11 +1312,11 @@ export const GlowingOrb = styled.div<{ position: string; color: string }>`
     };
     
     const positions = {
-      'top-right': 'top: -50px; right: -50px;',
-      'top-left': 'top: -50px; left: -50px;',
-      'bottom-right': 'bottom: -50px; right: -50px;',
-      'bottom-left': 'bottom: -50px; left: -50px;',
-      'center-right': 'top: 40%; right: -100px;'
+      'top-right': 'top: -70px; right: -70px;',
+      'top-left': 'top: -70px; left: -70px;',
+      'bottom-right': 'bottom: -70px; right: -70px;',
+      'bottom-left': 'bottom: -70px; left: -70px;',
+      'center-right': 'top: 45%; right: -120px;'
     };
     
     return `
@@ -1347,35 +1350,35 @@ export const ProfileBadge = styled.div`
 
 export const CursorFollower = styled.div`
   position: fixed;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: radial-gradient(circle at center, 
-               ${({ theme }) => theme.blue}15 0%, 
+               ${({ theme }) => theme.blue}10 0%,
                transparent 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s;
+  transition: opacity 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
   z-index: 9998;
-  box-shadow: 0 0 12px 2px ${({ theme }) => theme.blue}15;
-  border: 1px solid ${({ theme }) => theme.blue}22;
+  box-shadow: 0 0 10px 1px ${({ theme }) => theme.blue}10;
+  border: 1px solid ${({ theme }) => theme.blue}15;
   mix-blend-mode: screen;
   will-change: transform, width, height, opacity;
-  opacity: 0.6;
+  opacity: 0.5;
   
   &::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border-radius: 50%;
     background: inherit;
-    transform: translate(-50%, -50%) scale(0.65);
-    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.4;
     z-index: -1;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
   }
   
   &::after {
@@ -1384,76 +1387,76 @@ export const CursorFollower = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 3px;
-    height: 3px;
-    background-color: ${({ theme }) => theme.blue}88;
+    width: 2px;
+    height: 2px;
+    background-color: ${({ theme }) => theme.blue}77;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 6px 1px ${({ theme }) => theme.blue}44;
+    box-shadow: 0 0 4px 1px ${({ theme }) => theme.blue}33;
   }
   
   &.active {
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     background: radial-gradient(circle at center, 
-                ${({ theme }) => theme.lavender}22 0%, 
-                ${({ theme }) => theme.blue}11 50%,
+                ${({ theme }) => theme.lavender}15 0%,
+                ${({ theme }) => theme.blue}08 50%,
                 transparent 70%);
-    border: 1px solid ${({ theme }) => theme.lavender}33;
-    opacity: 0.8;
+    border: 1px solid ${({ theme }) => theme.lavender}22;
+    opacity: 0.7;
     
     &::before {
-      transform: translate(-50%, -50%) scale(0.8);
-      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.75);
+      opacity: 0.25;
     }
     
     &::after {
-      background-color: ${({ theme }) => theme.lavender}aa;
-      box-shadow: 0 0 8px 2px ${({ theme }) => theme.lavender}55;
+      background-color: ${({ theme }) => theme.lavender}99;
+      box-shadow: 0 0 6px 1px ${({ theme }) => theme.lavender}44;
     }
   }
   
   &.clicking {
     background: radial-gradient(circle at center, 
-                ${({ theme }) => theme.sapphire}44 0%, 
-                ${({ theme }) => theme.blue}22 60%,
+                ${({ theme }) => theme.sapphire}33 0%, 
+                ${({ theme }) => theme.blue}15 60%,
                 transparent 100%);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    opacity: 0.9;
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+    opacity: 0.8;
     
     &::before {
-      transform: translate(-50%, -50%) scale(0.5);
-      opacity: 0.7;
-      transition: all 0.1s ease;
+      transform: translate(-50%, -50%) scale(0.4);
+      opacity: 0.6;
+      transition: all 0.08s ease;
     }
     
     &::after {
       background-color: ${({ theme }) => theme.sapphire};
-      width: 2px;
-      height: 2px;
+      width: 1.5px;
+      height: 1.5px;
     }
   }
   
   &.theme-toggle-hover {
     mix-blend-mode: normal;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    opacity: 0.9;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    opacity: 0.8;
     
     &::before {
-      transform: translate(-50%, -50%) scale(1.2);
-      opacity: 0.2;
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 0.15;
       background: radial-gradient(circle at center, 
-                  ${({ theme }) => theme.yellow}22 0%, 
+                  ${({ theme }) => theme.yellow}15 0%,
                   transparent 70%);
     }
     
     &::after {
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       background: linear-gradient(135deg, ${({ theme }) => theme.yellow}, ${({ theme }) => theme.blue});
-      box-shadow: 0 0 12px 3px ${({ theme }) => theme.blue}66;
+      box-shadow: 0 0 10px 2px ${({ theme }) => theme.blue}55;
       animation: rotate 2s linear infinite;
     }
     

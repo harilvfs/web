@@ -9,9 +9,9 @@ export const userData = {
   profilePic: `${process.env.PUBLIC_URL}/aayush.png`,
   shortBio: 'Linux enthusiast & Bash scripting specialist with a big love 💖 for OSS.',
   distros: [
-    { name: 'Arch', icon: FaLinux },
-    { name: 'Debian', icon: FaLinux },
-    { name: 'Fedora', icon: FaFedora },
+    { name: 'Arch', icon: 'https://raw.githubusercontent.com/harilvfs/assets/88139ac78acfe24c24e12021cc316cae044321a7/archlinux/arch_linux.svg', url: 'https://archlinux.org/' },
+    { name: 'Debian', icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/harilvfs/debianx.png', url: 'https://www.debian.org/' },
+    { name: 'Fedora', icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/harilvfs/fedora.png', url: 'https://fedoraproject.org/' },
   ] as Distro[],
   about: [
     {
@@ -127,25 +127,25 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     title: 'Carch',
-    icon: 'FaLaptopCode',
+    icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/carch/carch.png',
     description: 'A simple Rust-based CLI tool (built with Ratatui) to streamline and automate your Linux system’s initial setup 🧩',
     link: 'https://github.com/harilvfs/carch'
   },
   {
     title: 'Arch Wiki',
-    icon: 'FaBook',
+    icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/archlinux/arch_linux.svg',
     description: 'Arch Wiki - OCD Edition ( Arch Linux Installation Guide )',
     link: 'https://github.com/harilfs/Arch-Wiki'
   },
   {
     title: 'DWM',
-    icon: 'FaWindowMaximize',
+    icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/dwm/Dwm.png',
     description: 'Customized Dynamic Window Manager configuration for Linux.',
     link: 'https://github.com/harilvfs/dwm'
   },
   {
     title: 'Blog Site',
-    icon: 'FaLaptopCode',
+    icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/profilestuff/Github-desktop-logo-symbol.svg.png',
     description: 'A simple, clean blog site built using React and TypeScript.',
     link: 'https://github.com/harilvfs/blog-site'
   }

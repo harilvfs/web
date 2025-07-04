@@ -931,10 +931,27 @@ export const ProjectCard = styled.div`
 
 export const ProjectIcon = styled.div`
   background-color: rgba(137, 180, 250, 0.2);
-  padding: 1.5rem;
-  font-size: 2rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
   color: ${({ theme }) => theme.lavender};
   text-align: center;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const ProjectDetails = styled.div`

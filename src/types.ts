@@ -29,7 +29,8 @@ export type SocialLink = {
 
 export type Distro = {
   name: string;
-  icon: IconType;
+  icon: IconType | string;
+  url?: string;
 };
 
 export type Theme = 'dark' | 'light'; 

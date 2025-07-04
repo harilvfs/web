@@ -44,8 +44,13 @@ const Profile: React.FC = () => {
       
       <DistroIcons>
         {userData.distros.map((distro, index) => (
-          <Distro key={index} title={distro.name}>
-            <distro.icon size={16} /> {distro.name}
+          <Distro key={index} title={distro.name} as={distro.url ? 'a' : 'div'} href={distro.url} target={distro.url ? '_blank' : undefined} rel={distro.url ? 'noopener noreferrer' : undefined}>
+            {typeof distro.icon === 'string' ? (
+              <img src={distro.icon} alt={distro.name} style={{ width: '16px', height: '16px', objectFit: 'contain' }} />
+            ) : (
+              <distro.icon size={16} />
+            )}
+            {distro.name}
           </Distro>
         ))}
       </DistroIcons>

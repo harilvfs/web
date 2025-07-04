@@ -18,9 +18,9 @@ interface ProjectsProps {
 }
 
 const iconMap: { [key: string]: React.ReactNode } = {
-  FaLaptopCode: <FaLaptopCode size={16} />,
-  FaBook: <FaBook size={16} />,
-  FaWindowMaximize: <FaWindowMaximize size={16} />,
+  FaLaptopCode: <FaLaptopCode size={24} />,
+  FaBook: <FaBook size={24} />,
+  FaWindowMaximize: <FaWindowMaximize size={24} />,
 };
 
 const Projects: React.FC<ProjectsProps> = ({ visible = true }) => {
@@ -32,7 +32,13 @@ const Projects: React.FC<ProjectsProps> = ({ visible = true }) => {
       <ProjectsContainer>
         {projects.map((project, index) => (
           <ProjectCard key={index}>
-            <ProjectIcon>{iconMap[project.icon]}</ProjectIcon>
+            <ProjectIcon>
+              {project.icon.startsWith('/') || project.icon.includes('.') ? (
+                <img src={project.icon} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              ) : (
+                iconMap[project.icon]
+              )}
+            </ProjectIcon>
             <ProjectDetails>
               <ProjectTitle>{project.title}</ProjectTitle>
               <ProjectDescription dangerouslySetInnerHTML={{ __html: project.description }} />

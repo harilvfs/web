@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
   TerminalContainer,
   TerminalHeaderBar,
@@ -20,7 +20,12 @@ interface TerminalProps {
 
 const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 0 }) => {
   const [visible, setVisible] = useState(false);
-  const [typedCommands, setTypedCommands] = useState<number[]>([]);
+  const [typedCommands, setTypedCommands] = useState<{ command: string; text: string }[]>([]);
+  const [currentCommandIndex, setCurrentCommandIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(false);
+  const [typedText, setTypedText] = useState('');
+  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,20 +36,37 @@ const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 
   }, [delay]);
 
   useEffect(() => {
-    if (visible && commands) {
-      const timers: NodeJS.Timeout[] = [];
+    if (visible && commands && currentCommandIndex < commands.length) {
+      setIsTyping(true);
+      setTypedText('');
       
-      commands.forEach((_, index) => {
-        const timer = setTimeout(() => {
-          setTypedCommands(prev => [...prev, index]);
-        }, 500 + (index * 800));
+      typingTimeoutRef.current = setTimeout(() => {
+        let currentText = '';
+        const commandToType = commands[currentCommandIndex].command;
+        let i = 0;
+
+        const type = () => {
+          if (i < commandToType.length) {
+            currentText += commandToType[i];
+            setTypedText(currentText);
+            i++;
+            animationFrameRef.current = requestAnimationFrame(type);
+          } else {
+            setIsTyping(false);
+            setTypedCommands(prev => [...prev, commands[currentCommandIndex]]);
+            setCurrentCommandIndex(prev => prev + 1);
+          }
+        };
         
-        timers.push(timer);
-      });
-      
-      return () => timers.forEach(timer => clearTimeout(timer));
+        animationFrameRef.current = requestAnimationFrame(type);
+      }, 500);
     }
-  }, [visible, commands]);
+
+    return () => {
+      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+    };
+  }, [visible, commands, currentCommandIndex]);
 
   if (!visible) return null;
 
@@ -60,23 +82,20 @@ const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 
       </TerminalHeaderBar>
       <TerminalContent>
         {commands ? (
-          commands.map((cmd, index) => (
-            <React.Fragment key={index}>
-              {typedCommands.includes(index) ? (
-                <>
-                  <TerminalLine>{cmd.command}</TerminalLine>
-                  <TerminalText dangerouslySetInnerHTML={{ __html: cmd.text }} />
-                </>
-              ) : (
-                typedCommands.length === index ? (
-                  <TerminalLine>
-                    {cmd.command.slice(0, Math.floor(Date.now() / 100) % (cmd.command.length + 1))}
-                    <TerminalCursor />
-                  </TerminalLine>
-                ) : null
-              )}
-            </React.Fragment>
-          ))
+          <>
+            {typedCommands.map((cmd, index) => (
+              <React.Fragment key={index}>
+                <TerminalLine>{cmd.command}</TerminalLine>
+                <TerminalText dangerouslySetInnerHTML={{ __html: cmd.text }} />
+              </React.Fragment>
+            ))}
+            {isTyping && (
+              <TerminalLine>
+                {typedText}
+                <TerminalCursor />
+              </TerminalLine>
+            )}
+          </>
         ) : (
           children
         )}

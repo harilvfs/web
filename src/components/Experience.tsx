@@ -3,7 +3,7 @@ import { FaCodeBranch } from 'react-icons/fa';
 import { Section, SectionTitle } from './styled';
 import Terminal from './Terminal';
 import { experiences } from '../data';
-import styled, { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components';
 
 interface ExperienceProps {
   visible?: boolean;

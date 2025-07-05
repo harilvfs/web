@@ -1298,7 +1298,6 @@ export const GlowingOrb = styled.div<{ position: string; color: string }>`
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  filter: blur(90px);
   z-index: -1;
   opacity: 0.25;
   
@@ -1320,7 +1319,7 @@ export const GlowingOrb = styled.div<{ position: string; color: string }>`
     };
     
     return `
-      background-color: ${colors[color as keyof typeof colors]};
+      background: radial-gradient(circle, ${colors[color as keyof typeof colors]} 0%, transparent 70%);
       ${positions[position as keyof typeof positions]}
     `;
   }}

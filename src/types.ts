@@ -2,7 +2,6 @@ import { IconType } from 'react-icons';
 
 export type Experience = {
   title: string;
-  command: string;
   date: string;
   description: string;
 };

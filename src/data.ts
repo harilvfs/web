@@ -61,21 +61,19 @@ export const socialLinks: SocialLink[] = [
 
 export const experiences: Experience[] = [
   {
-    title: 'Bash Scripting Specialist',
-    command: '~/scripts$ ./automation.sh --optimize',
-    date: '2023 - Present',
-    description: 'Writing Bash scripts to automate tasks. Breaking stuff, fixing it, and learning in the process.'
-  },
-  {
     title: 'Linux CLI Tool Developer',
-    command: '~/cli$ cargo build --release',
     date: '2024 - Present',
     description: 'Making fast and simple command line tools using Rust(btw).'
   },
-  
+ 
+  {
+    title: 'Bash Scripting Specialist',
+    date: '2023 - Present',
+    description: 'Writing Bash scripts to automate tasks. Breaking stuff, fixing it, and learning in the process.'
+  },
+ 
   {
     title: 'Casual Designer',
-    command: '~/design$ inkscape project.svg',
     date: '2021 - Present',
     description: 'Sometimes I do make style banner logo and many more not best but usable.'
   }
@@ -95,7 +93,7 @@ export const skills: Skill[] = [
   {
     name: 'Rust Programming',
     icon: 'SiRust',
-    progress: 70
+    progress: 50
   },
   {
     name: 'Photoshop',

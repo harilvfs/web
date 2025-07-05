@@ -23,11 +23,16 @@ const App: React.FC = () => {
   });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const handleLoad = () => {
       setLoading(false);
-    }, 500);
-    
-    return () => clearTimeout(timer);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
   }, []);
 
   const handleScroll = useCallback(() => {

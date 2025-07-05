@@ -1038,7 +1038,6 @@ export const FormInput = styled.input`
   background-color: ${({ theme }) => theme.mantle};
   color: ${({ theme }) => theme.text};
   font-family: 'Inter', sans-serif;
-  transition: all 0.3s ease;
   font-size: 0.95rem;
 
   &:focus {
@@ -1061,7 +1060,6 @@ export const FormTextArea = styled.textarea`
   background-color: ${({ theme }) => theme.mantle};
   color: ${({ theme }) => theme.text};
   font-family: 'Inter', sans-serif;
-  transition: all 0.3s ease;
   min-height: 140px;
   resize: vertical;
   font-size: 0.95rem;

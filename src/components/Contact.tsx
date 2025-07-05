@@ -10,10 +10,10 @@ import {
   FormInput,
   FormTextArea,
   SubmitButton,
-  EmailContact,
   SuccessNotification,
 } from './styled';
 import { userData } from '../data';
+import Terminal from './Terminal';
 
 interface ContactProps {
   visible?: boolean;
@@ -63,6 +63,11 @@ const Contact: React.FC<ContactProps> = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const emailCommand = {
+    command: 'sendmail',
+    text: `Or email me directly at: <a href="mailto:${userData.email}">${userData.email}</a>`,
   };
 
   return (
@@ -127,10 +132,7 @@ const Contact: React.FC<ContactProps> = () => {
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </SubmitButton>
       </ContactForm>
-      <EmailContact>
-        Or email me directly at:{' '}
-        <a href={`mailto:${userData.email}`}>{userData.email}</a>
-      </EmailContact>
+      <Terminal title="~/mail" commands={[emailCommand]} delay={100} />
     </>
   );
 };

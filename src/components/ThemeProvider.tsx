@@ -36,9 +36,9 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       return newIsDark;
     });
     
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       setIsAnimating(false);
-    }, 400); 
+    });
   }, [isAnimating]);
 
   return (

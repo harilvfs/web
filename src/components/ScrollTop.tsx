@@ -1,22 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 import { ScrollTop as StyledScrollTop } from './styled';
 
 const ScrollTop: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
+  const showScrollRef = useRef(showScroll);
+
+  const checkScrollTop = useCallback(() => {
+    if (!showScrollRef.current && window.pageYOffset > 300) {
+      setShowScroll(true);
+      showScrollRef.current = true;
+    } else if (showScrollRef.current && window.pageYOffset <= 300) {
+      setShowScroll(false);
+      showScrollRef.current = false;
+    }
+  }, []);
 
   useEffect(() => {
-    const checkScrollTop = () => {
-      if (!showScroll && window.pageYOffset > 300) {
-        setShowScroll(true);
-      } else if (showScroll && window.pageYOffset <= 300) {
-        setShowScroll(false);
-      }
-    };
-
     window.addEventListener('scroll', checkScrollTop);
     return () => window.removeEventListener('scroll', checkScrollTop);
-  }, [showScroll]);
+  }, [checkScrollTop]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

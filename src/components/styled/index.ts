@@ -46,13 +46,13 @@ const blink = keyframes`
 
 const float = keyframes`
   0% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translate3d(0, -10px, 0);
   }
   100% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0, 0);
   }
 `;
 

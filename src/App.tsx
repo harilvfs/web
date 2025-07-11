@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Container, Sidebar, MainContent, Footer, FooterTerminalPrompt, GlowingOrb, CopyrightSection } from './components/styled';
 import ThemeProvider from './components/ThemeProvider';
 import Profile from './components/Profile';
@@ -10,7 +10,6 @@ import Contact from './components/Contact';
 import ScrollTop from './components/ScrollTop';
 import Loader from './components/Loader';
 import ProgressBar from './components/ProgressBar';
-import { throttle } from './utils';
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -20,6 +19,14 @@ const App: React.FC = () => {
     skills: false,
     projects: false,
     contact: false,
+  });
+
+  const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({
+    about: null,
+    experience: null,
+    skills: null,
+    projects: null,
+    contact: null,
   });
 
   useEffect(() => {
@@ -35,45 +42,42 @@ const App: React.FC = () => {
     }
   }, []);
 
-  const handleScroll = useCallback(() => {
-    if (loading) return;
-    
-    const about = document.getElementById('about');
-    const experience = document.getElementById('experience');
-    const skills = document.getElementById('skills');
-    const projects = document.getElementById('projects');
-    const contact = document.querySelector('.contact-form');
-
-    const isInViewport = (element: Element | null) => {
-      if (!element) return false;
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight * 0.8) &&
-        rect.bottom >= 0
-      );
-    };
-
-    setVisibleSections({
-      about: isInViewport(about),
-      experience: isInViewport(experience),
-      skills: isInViewport(skills),
-      projects: isInViewport(projects),
-      contact: isInViewport(contact),
-    });
-  }, [loading]);
-
   useEffect(() => {
     if (loading) return;
-    
-    handleScroll();
-    
-    const throttledScrollHandler = throttle(handleScroll, 100);
-    
-    window.addEventListener('scroll', throttledScrollHandler, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.id]: true,
+            }));
+          }
+        });
+      },
+      {
+        rootMargin: '0px 0px -20% 0px',
+      }
+    );
+
+    const currentRefs = sectionRefs.current;
+    Object.keys(currentRefs).forEach((key) => {
+      const ref = document.getElementById(key);
+      if (ref) {
+        currentRefs[key] = ref;
+        observer.observe(ref);
+      }
+    });
+
     return () => {
-      window.removeEventListener('scroll', throttledScrollHandler);
+      Object.values(currentRefs).forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
     };
-  }, [handleScroll, loading]);
+  }, [loading]);
 
   const decorativeElements = useMemo(() => (
     <>
@@ -84,6 +88,11 @@ const App: React.FC = () => {
   ), []);
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
+
+  const MemoizedAbout = useMemo(() => React.memo(About), []);
+  const MemoizedExperience = useMemo(() => React.memo(Experience), []);
+  const MemoizedSkills = useMemo(() => React.memo(Skills), []);
+  const MemoizedProjects = useMemo(() => React.memo(Projects), []);
 
   return (
     <ThemeProvider>
@@ -99,10 +108,10 @@ const App: React.FC = () => {
               <Profile />
             </Sidebar>
             <MainContent className="mainContent">
-              <About visible={visibleSections.about} />
-              <Experience visible={visibleSections.experience} />
-              <Skills visible={visibleSections.skills} />
-              <Projects visible={visibleSections.projects} />
+              <MemoizedAbout visible={visibleSections.about} />
+              <MemoizedExperience visible={visibleSections.experience} />
+              <MemoizedSkills visible={visibleSections.skills} />
+              <MemoizedProjects visible={visibleSections.projects} />
               <Contact />
               
               <Footer>

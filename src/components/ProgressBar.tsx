@@ -6,29 +6,26 @@ const ProgressBar: React.FC = () => {
   const theme = useTheme();
   
   useEffect(() => {
-    if (!progressBarRef.current) return;
-    
-    const progressBar = progressBarRef.current;
-    let rafId: number;
-    
     const updateProgressBar = () => {
-      if (!progressBar) return;
+      if (!progressBarRef.current) return;
       
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollY = window.scrollY;
       
-      if (scrollHeight) {
+      if (scrollHeight > 0) {
         const progress = (scrollY / scrollHeight) * 100;
-        progressBar.style.width = `${progress}%`;
+        progressBarRef.current.style.width = `${progress}%`;
+      } else {
+        progressBarRef.current.style.width = '0%';
       }
-      
-      rafId = requestAnimationFrame(updateProgressBar);
     };
+
+    window.addEventListener('scroll', updateProgressBar, { passive: true });
     
-    rafId = requestAnimationFrame(updateProgressBar);
+    updateProgressBar();
     
     return () => {
-      cancelAnimationFrame(rafId);
+      window.removeEventListener('scroll', updateProgressBar);
     };
   }, []);
   
@@ -45,6 +42,7 @@ const ProgressBar: React.FC = () => {
         zIndex: 1000,
         boxShadow: '0 0 8px rgba(0, 0, 0, 0.2)',
         willChange: 'width',
+        transition: 'width 0.05s linear',
       }}
     />
   );

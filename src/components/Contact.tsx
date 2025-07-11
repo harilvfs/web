@@ -81,7 +81,7 @@ const Contact: React.FC<ContactProps> = () => {
           Thank you! Your message has been sent successfully.
         </SuccessNotification>
       )}
-      <ContactForm onSubmit={handleSubmit} action="https://formspree.io/f/mjkbkgpz" method="POST">
+      <ContactForm id="contact" onSubmit={handleSubmit} action="https://formspree.io/f/mjkbkgpz" method="POST">
         <TerminalHeaderBar>
           <TerminalButtons>
             <TerminalBtn color="close" />

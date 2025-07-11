@@ -92,7 +92,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
   
   html {
-    scroll-behavior: smooth;
+    
   }
   
   html, body {

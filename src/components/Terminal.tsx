@@ -24,7 +24,6 @@ const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 
   const [currentCommandIndex, setCurrentCommandIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
   const [typedText, setTypedText] = useState('');
-  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -39,36 +38,36 @@ const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 
     if (visible && commands && currentCommandIndex < commands.length) {
       setIsTyping(true);
       setTypedText('');
-      
-      typingTimeoutRef.current = setTimeout(() => {
-        let currentText = '';
-        const commandToType = commands[currentCommandIndex].command;
-        let i = 0;
 
-        const type = () => {
-          if (i < commandToType.length) {
-            currentText += commandToType[i];
-            setTypedText(currentText);
-            i++;
-            animationFrameRef.current = requestAnimationFrame(type);
-          } else {
-            setIsTyping(false);
-            setTypedCommands(prev => [...prev, commands[currentCommandIndex]]);
-            setCurrentCommandIndex(prev => prev + 1);
-          }
-        };
-        
-        animationFrameRef.current = requestAnimationFrame(type);
-      }, 500);
+      let i = 0;
+      const commandToType = commands[currentCommandIndex].command;
+      const type = () => {
+        if (i < commandToType.length) {
+          setTypedText(commandToType.substring(0, i + 1));
+          i++;
+          animationFrameRef.current = requestAnimationFrame(type);
+        } else {
+          setIsTyping(false);
+          setTypedCommands(prev => [...prev, commands[currentCommandIndex]]);
+          setCurrentCommandIndex(prev => prev + 1);
+        }
+      };
+      animationFrameRef.current = requestAnimationFrame(type);
     }
 
     return () => {
-      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
-      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, [visible, commands, currentCommandIndex]);
 
   if (!visible) return null;
+
+  const sanitizeHTML = (html: string) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.innerHTML;
+  };
 
   return (
     <TerminalContainer>
@@ -86,7 +85,7 @@ const Terminal: React.FC<TerminalProps> = ({ title, children, commands, delay = 
             {typedCommands.map((cmd, index) => (
               <React.Fragment key={index}>
                 <TerminalLine>{cmd.command}</TerminalLine>
-                <TerminalText dangerouslySetInnerHTML={{ __html: cmd.text }} />
+                <TerminalText dangerouslySetInnerHTML={{ __html: sanitizeHTML(cmd.text) }} />
               </React.Fragment>
             ))}
             {isTyping && (

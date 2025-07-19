@@ -12,6 +12,7 @@ export const userData = {
     { name: 'Arch', icon: 'https://raw.githubusercontent.com/harilvfs/assets/88139ac78acfe24c24e12021cc316cae044321a7/archlinux/arch_linux.svg', url: 'https://archlinux.org/' },
     { name: 'Debian', icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/harilvfs/debianx.png', url: 'https://www.debian.org/' },
     { name: 'Fedora', icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/harilvfs/fedora.png', url: 'https://fedoraproject.org/' },
+    { name: 'openSUSE', icon: 'https://raw.githubusercontent.com/harilvfs/assets/refs/heads/main/suse/opensuse.png', url: 'https://www.opensuse.org/' },
   ] as Distro[],
   about: [
     {

@@ -25,11 +25,7 @@ const blinkCaret = keyframes`
 `;
 
 export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
-  /* Import high-quality developer-friendly fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700&display=swap');
+  
 
   * {
     margin: 0;
@@ -45,14 +41,6 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-size: 0.95rem;
     overflow-x: hidden;
     transition: background-color 0.2s ease, color 0.2s ease;
-    background-image: 
-      radial-gradient(at 40% 20%, hsla(217, 100%, 64%, 0.07) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.07) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsla(355, 85%, 63%, 0.07) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 0.07) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(269, 100%, 77%, 0.07) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(130, 100%, 70%, 0.07) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, hsla(248, 100%, 78%, 0.07) 0px, transparent 50%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -226,8 +214,7 @@ export const Sidebar = styled.div`
   transform: translateZ(0);
   
   @media (min-width: 1024px) {
-    backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
-    -webkit-backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
+
   }
 
   @media (max-width: 992px) {
@@ -279,12 +266,11 @@ export const ProfilePic = styled.div`
   margin: 0 auto 1.8rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s ease;
   box-shadow: 0 0 0 4px ${({ theme }) => theme.blue}, 
               0 0 20px rgba(56, 189, 248, 0.5);
 
   &:hover {
-    transform: scale(1.03);
     box-shadow: 0 0 0 4px ${({ theme }) => theme.sky}, 
                 0 0 25px rgba(56, 189, 248, 0.6);
   }
@@ -457,8 +443,7 @@ export const ThemeToggle = styled.button<{ isDark?: boolean }>`
   overflow: hidden;
   
   @media (min-width: 1024px) {
-    backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
-    -webkit-backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
+
   }
   
   &:hover {
@@ -602,8 +587,7 @@ export const TerminalContainer = styled.div`
   box-shadow: ${({ theme }) => theme.glass.boxShadow};
   
   @media (min-width: 1024px) {
-    backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
-    -webkit-backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
+
   }
 `;
 
@@ -688,7 +672,7 @@ export const TerminalContent = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.surface1};
+    background-color: ${({ theme }) => theme.base};
     border-radius: 3px;
   }
 `;
@@ -855,7 +839,7 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectCard = styled.div`
-  background-color: ${({ theme }) => theme.surface0};
+  background-color: ${({ theme }) => theme.base};
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -942,7 +926,7 @@ export const ProjectLink = styled.a`
 `;
 
 export const ContactForm = styled.form`
-  background-color: ${({ theme }) => theme.surface0};
+  background-color: ${({ theme }) => theme.base};
   padding: 1.5rem;
   border-radius: 8px;
   margin-top: 1.5rem;

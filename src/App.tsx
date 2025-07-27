@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Container, Sidebar, MainContent, Footer, FooterTerminalPrompt, GlowingOrb, CopyrightSection } from './components/styled';
+import { Container, Sidebar, MainContent, Footer, FooterTerminalPrompt, CopyrightSection } from './components/styled';
 import ThemeProvider from './components/ThemeProvider';
 import Profile from './components/Profile';
 import About from './components/About';
@@ -7,17 +7,9 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import ScrollTop from './components/ScrollTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 const App: React.FC = () => {
-  const decorativeElements = useMemo(() => (
-    <>
-      <GlowingOrb position="top-right" color="blue" />
-      <GlowingOrb position="bottom-left" color="purple" />
-      <GlowingOrb position="center-right" color="teal" />
-    </>
-  ), []);
-
   const currentYear = useMemo(() => new Date().getFullYear(), []);
 
   const MemoizedAbout = useMemo(() => React.memo(About), []);
@@ -28,8 +20,6 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <>
-        {decorativeElements}
-        
         <Container>
           <Sidebar>
             <Profile />
@@ -52,7 +42,7 @@ const App: React.FC = () => {
             </Footer>
           </MainContent>
         </Container>
-        <ScrollTop />
+        <ScrollToTopButton />
       </>
     </ThemeProvider>
   );

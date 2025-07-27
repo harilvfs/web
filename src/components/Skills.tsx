@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
       <SectionTitle>
         <FaCogs size={20} /> Skills
       </SectionTitle>
-      <Terminal title="~/skills" commands={[{ command: 'cat skills.txt', text: skillsDescription }, ...skillCommands]} delay={700} />
+      <Terminal title="~/skills" commands={[{ command: 'cat skills.txt', text: skillsDescription }, ...skillCommands]} />
     </Section>
   );
 };

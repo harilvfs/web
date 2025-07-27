@@ -12,7 +12,7 @@
 
 body {
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 255, 255, 0.5) transparent;
+  scrollbar-color: #111827 transparent;
 }
 
 ::-webkit-scrollbar {
@@ -24,12 +24,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 255, 255, 0.5) !important;
+  background-color: #111827 !important;
   border-radius: 8px !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 255, 255, 0.7) !important;
+  background-color: #1f2937 !important;
 }
 
 code {
@@ -48,4 +48,3 @@ code {
   vertical-align: middle;
   border-radius: 50%;
 }
-

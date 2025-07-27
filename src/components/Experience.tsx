@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
       <SectionTitle>
         <FaCodeBranch size={20} /> Experience
       </SectionTitle>
-      <Terminal title="~/experience" commands={experienceCommands} delay={500} />
+      <Terminal title="~/experience" commands={experienceCommands} />
     </Section>
   );
 };

@@ -132,7 +132,7 @@ const Contact: React.FC<ContactProps> = () => {
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </SubmitButton>
       </ContactForm>
-      <Terminal title="~/mail" commands={[emailCommand]} delay={100} />
+      <Terminal title="~/mail" commands={[emailCommand]} />
     </>
   );
 };

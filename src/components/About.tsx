@@ -13,7 +13,7 @@ const About: React.FC = () => {
         </SectionIcon>
         About
       </SectionTitle>
-      <Terminal title="~/about" commands={userData.about} delay={300} />
+      <Terminal title="~/about" commands={userData.about} />
     </Section>
   );
 };

@@ -24,38 +24,6 @@ const blinkCaret = keyframes`
   50% { border-color: ${props => props.theme.blue} }
 `;
 
-const pulse = keyframes`
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.5);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
-  }
-`;
-
-const blink = keyframes`
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-`;
-
-const float = keyframes`
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -10px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
 export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   /* Import high-quality developer-friendly fonts */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -314,7 +282,6 @@ export const ProfilePic = styled.div`
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 0 0 4px ${({ theme }) => theme.blue}, 
               0 0 20px rgba(56, 189, 248, 0.5);
-  animation: ${float} 6s ease-in-out infinite;
 
   &:hover {
     transform: scale(1.03);
@@ -413,8 +380,6 @@ export const Distro = styled.span`
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     background-color: ${({ theme }) => theme.blue};
     color: #fff;
   }
@@ -449,10 +414,6 @@ export const SocialLink = styled.a<{ delay?: number }>`
   color: ${({ theme }) => theme.subtext0};
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(10px);
-  animation: ${fadeIn} 0.5s ease forwards;
-  animation-delay: ${({ delay }) => delay || 0}ms;
   
   @media (max-width: 576px) {
     width: 35px;
@@ -553,13 +514,9 @@ export const ThemeToggleIcon = styled.span`
   }
 `;
 
-export const Section = styled.section<{ visible: boolean }>`
+export const Section = styled.section`
   margin-bottom: 4rem;
-  opacity: ${({ visible }) => (visible ? 1 : 0.3)};
-  transform: translateY(${({ visible }) => (visible ? 0 : '20px')});
-  transition: opacity 0.5s ease, transform 0.5s ease;
   scroll-margin-top: 2rem;
-  will-change: opacity, transform;
   
   @media (max-width: 576px) {
     margin-bottom: 3rem;
@@ -643,10 +600,6 @@ export const TerminalContainer = styled.div`
   background-color: ${({ theme }) => theme.glass.background};
   border: ${({ theme }) => theme.glass.border};
   box-shadow: ${({ theme }) => theme.glass.boxShadow};
-  opacity: 0;
-  transform: translateY(20px);
-  animation: ${fadeIn} 0.5s ease forwards;
-  will-change: transform, opacity;
   
   @media (min-width: 1024px) {
     backdrop-filter: ${({ theme }) => theme.glass.backdropFilter};
@@ -764,7 +717,6 @@ export const TerminalCursor = styled.span`
   height: 17px;
   background-color: ${({ theme }) => theme.blue};
   margin-left: 2px;
-  animation: ${blink} 1s step-end infinite;
   vertical-align: middle;
 `;
 
@@ -804,10 +756,6 @@ export const TimelineItem = styled.div`
     background-color: ${({ theme }) => theme.lavender};
   }
 
-  &:hover {
-    transform: translateX(5px);
-  }
-  
   @media (max-width: 576px) {
     padding-left: 20px;
     margin-bottom: 1.2rem;
@@ -863,7 +811,6 @@ export const SkillCard = styled.div`
   border-left: 3px solid ${({ theme }) => theme.lavender};
 
   &:hover {
-    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 `;
@@ -888,11 +835,10 @@ export const SkillBar = styled.div`
   overflow: hidden;
 `;
 
-export const SkillProgress = styled.div<{ progress: number; visible?: boolean }>`
+export const SkillProgress = styled.div<{ progress: number }>`
   height: 100%;
   background: linear-gradient(to right, ${({ theme }) => theme.blue}, ${({ theme }) => theme.lavender});
-  transition: width 1s ease-in-out;
-  width: ${({ progress, visible }) => (visible ? `${progress}%` : '0')};
+  width: ${({ progress }) => `${progress}%`};
 `;
 
 export const ProjectsContainer = styled.div`
@@ -921,7 +867,6 @@ export const ProjectCard = styled.div`
   flex-direction: column;
   
   &:hover {
-    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
@@ -1090,7 +1035,6 @@ export const SubmitButton = styled.button`
 
   &:hover {
     background-color: ${({ theme }) => theme.lavender};
-    transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
   }
   
@@ -1232,7 +1176,6 @@ export const CopyrightSection = styled.div`
 export const FooterTerminalPrompt = styled.span`
   color: ${({ theme }) => theme.blue};
   font-family: 'Fira Code', monospace;
-  animation: ${blink} 1s infinite;
   background: rgba(56, 189, 248, 0.15);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
@@ -1258,38 +1201,14 @@ export const ScrollTop = styled.div<{ show: boolean }>`
   transform: ${({ show }) => (show ? 'translateY(0)' : 'translateY(20px)')};
   transition: all 0.3s ease;
   z-index: 1000;
-  animation: ${pulse} 2s infinite;
 
   &:hover {
     background-color: ${({ theme }) => theme.lavender};
     transform: scale(1.1);
-    animation: none;
   }
 `;
 
-export const ProgressBar = styled.div<{ progress: number }>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  will-change: transform;
-  overflow: hidden;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to right, ${({ theme }) => theme.blue}, ${({ theme }) => theme.lavender});
-    transform: translateX(${({ progress }) => `${progress - 100}%`});
-    transition: transform 0.01s linear;
-  }
-`;
+
 
 export const GlowingOrb = styled.div<{ position: string; color: string }>`
   position: fixed;
@@ -1345,133 +1264,7 @@ export const ProfileBadge = styled.div`
   box-shadow: 0 0 0 2px ${({ theme }) => theme.blue};
 `;
 
-export const CursorFollower = styled.div`
-  position: fixed;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, 
-               ${({ theme }) => theme.blue}10 0%,
-               transparent 70%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
-  z-index: 9998;
-  box-shadow: 0 0 10px 1px ${({ theme }) => theme.blue}10;
-  border: 1px solid ${({ theme }) => theme.blue}15;
-  mix-blend-mode: screen;
-  will-change: transform, width, height, opacity;
-  opacity: 0.5;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    background: inherit;
-    transform: translate(-50%, -50%) scale(0.7);
-    opacity: 0.4;
-    z-index: -1;
-    transition: all 0.4s ease;
-  }
-  
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.blue}77;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 4px 1px ${({ theme }) => theme.blue}33;
-  }
-  
-  &.active {
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    background: radial-gradient(circle at center, 
-                ${({ theme }) => theme.lavender}15 0%,
-                ${({ theme }) => theme.blue}08 50%,
-                transparent 70%);
-    border: 1px solid ${({ theme }) => theme.lavender}22;
-    opacity: 0.7;
-    
-    &::before {
-      transform: translate(-50%, -50%) scale(0.75);
-      opacity: 0.25;
-    }
-    
-    &::after {
-      background-color: ${({ theme }) => theme.lavender}99;
-      box-shadow: 0 0 6px 1px ${({ theme }) => theme.lavender}44;
-    }
-  }
-  
-  &.clicking {
-    background: radial-gradient(circle at center, 
-                ${({ theme }) => theme.sapphire}33 0%, 
-                ${({ theme }) => theme.blue}15 60%,
-                transparent 100%);
-    backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(0.5px);
-    opacity: 0.8;
-    
-    &::before {
-      transform: translate(-50%, -50%) scale(0.4);
-      opacity: 0.6;
-      transition: all 0.08s ease;
-    }
-    
-    &::after {
-      background-color: ${({ theme }) => theme.sapphire};
-      width: 1.5px;
-      height: 1.5px;
-    }
-  }
-  
-  &.theme-toggle-hover {
-    mix-blend-mode: normal;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    opacity: 0.8;
-    
-    &::before {
-      transform: translate(-50%, -50%) scale(1.1);
-      opacity: 0.15;
-      background: radial-gradient(circle at center, 
-                  ${({ theme }) => theme.yellow}15 0%,
-                  transparent 70%);
-    }
-    
-    &::after {
-      width: 5px;
-      height: 5px;
-      background: linear-gradient(135deg, ${({ theme }) => theme.yellow}, ${({ theme }) => theme.blue});
-      box-shadow: 0 0 10px 2px ${({ theme }) => theme.blue}55;
-      animation: rotate 2s linear infinite;
-    }
-    
-    
-    @keyframes rotate {
-      from {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      to {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-  }
-  
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
+
 
 export const Highlight = styled.span`
   color: ${({ theme }) => theme.text};

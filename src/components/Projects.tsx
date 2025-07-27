@@ -13,19 +13,15 @@ import {
 } from './styled';
 import { projects } from '../data';
 
-interface ProjectsProps {
-  visible?: boolean;
-}
-
 const iconMap: { [key: string]: React.ReactNode } = {
   FaLaptopCode: <FaLaptopCode size={24} />,
   FaBook: <FaBook size={24} />,
   FaWindowMaximize: <FaWindowMaximize size={24} />,
 };
 
-const Projects: React.FC<ProjectsProps> = ({ visible = true }) => {
+const Projects: React.FC = () => {
   return (
-    <Section id="projects" visible={visible}>
+    <Section id="projects">
       <SectionTitle>
         <FaFolderOpen size={20} /> Projects
       </SectionTitle>

@@ -4,18 +4,14 @@ import { Section, SectionTitle } from './styled';
 import Terminal from './Terminal';
 import { skills, skillsDescription } from '../data';
 
-interface SkillsProps {
-  visible?: boolean;
-}
-
-const Skills: React.FC<SkillsProps> = ({ visible = true }) => {
+const Skills: React.FC = () => {
   const skillCommands = skills.map(skill => ({
     command: `eval ${skill.name.toLowerCase().replace(/ /g, '_')}`,
     text: `Skill level: ${skill.progress}%`,
   }));
 
   return (
-    <Section id="skills" visible={visible}>
+    <Section id="skills">
       <SectionTitle>
         <FaCogs size={20} /> Skills
       </SectionTitle>

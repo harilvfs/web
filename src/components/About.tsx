@@ -4,13 +4,9 @@ import { Section, SectionTitle, SectionIcon } from './styled';
 import Terminal from './Terminal';
 import { userData } from '../data';
 
-interface AboutProps {
-  visible?: boolean;
-}
-
-const About: React.FC<AboutProps> = ({ visible = true }) => {
+const About: React.FC = () => {
   return (
-    <Section id="about" visible={visible}>
+    <Section id="about">
       <SectionTitle>
         <SectionIcon>
           <FaTerminal size={20} />

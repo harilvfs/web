@@ -3,7 +3,6 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { ThemeToggle, ThemeToggleIcon, GlobalStyle } from './styled';
 import { ThemeContext, ThemeUpdateContext, darkTheme, lightTheme } from '../theme';
-import CursorFollower from './CursorFollower';
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -58,7 +57,6 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
               {isDarkTheme ? <FaMoon size={18} /> : <FaSun size={18} />}
             </ThemeToggleIcon>
           </ThemeToggle>
-          <CursorFollower />
         </StyledThemeProvider>
       </ThemeUpdateContext.Provider>
     </ThemeContext.Provider>

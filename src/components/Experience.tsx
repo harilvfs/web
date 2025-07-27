@@ -5,11 +5,7 @@ import Terminal from './Terminal';
 import { experiences } from '../data';
 import { useTheme } from 'styled-components';
 
-interface ExperienceProps {
-  visible?: boolean;
-}
-
-const Experience: React.FC<ExperienceProps> = ({ visible = true }) => {
+const Experience: React.FC = () => {
   const theme = useTheme();
   const experienceText = experiences
     .map(exp => `<span style="color: ${theme.blue}">~</span> <b>${exp.title}</b> (${exp.date})<br />${exp.description}`)
@@ -21,7 +17,7 @@ const Experience: React.FC<ExperienceProps> = ({ visible = true }) => {
   }];
 
   return (
-    <Section id="experience" visible={visible}>
+    <Section id="experience">
       <SectionTitle>
         <FaCodeBranch size={20} /> Experience
       </SectionTitle>

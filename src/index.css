@@ -40,3 +40,12 @@ code {
 .heading-highlight {
   color: #38bdf8;
 }
+
+.footer-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+

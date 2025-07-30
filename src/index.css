@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 ::-moz-selection {
   color: #0f172a;
   background: rgba(56, 189, 248, 0.4);
@@ -13,6 +15,7 @@
 body {
   scrollbar-width: thin;
   scrollbar-color: #111827 transparent;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 ::-webkit-scrollbar {

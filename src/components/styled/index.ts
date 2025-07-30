@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   body {
-    font-family: 'Inter', 'Fira Code', 'JetBrains Mono', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     background-color: ${({ theme }) => theme.base};
     color: ${({ theme }) => theme.subtext0};
     line-height: 1.6;
@@ -70,17 +70,12 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   @font-face {
-    font-family: 'Fira Code';
-    font-display: swap;
-  }
-
-  @font-face {
     font-family: 'JetBrains Mono';
     font-display: swap;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -106,11 +101,11 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   p, li, a, button, input, textarea {
-    font-family: 'Inter', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
   }
 
   code, pre, .terminal-text {
-    font-family: 'Fira Code', 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
   }
 
   a {

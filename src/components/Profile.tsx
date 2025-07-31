@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaReddit, FaTelegram, FaDiscord, FaGithub, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaTwitter, FaReddit, FaTelegram, FaDiscord, FaGithub, FaMapMarkerAlt, FaBlog } from 'react-icons/fa';
 import {
   SidebarContent,
   ProfilePic,
@@ -23,6 +23,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
   FaTelegram: <FaTelegram size={18} />,
   FaDiscord: <FaDiscord size={18} />,
   FaGithub: <FaGithub size={18} />,
+  FaBlog: <FaBlog size={18} />,
 };
 
 const Profile: React.FC = () => {

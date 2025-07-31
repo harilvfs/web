@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Experience, Project, Skill, SocialLink, Distro } from './types';
-import { FaLinux, FaFedora, FaTwitter, FaReddit, FaGithub, FaDiscord, FaTelegram, FaLaptopCode, FaBook, FaWindowMaximize, FaTerminal, FaDesktop, FaServer, FaNetworkWired, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
+import { FaLinux, FaFedora, FaTwitter, FaReddit, FaGithub, FaDiscord, FaTelegram, FaLaptopCode, FaBlog, FaWindowMaximize, FaTerminal, FaDesktop, FaServer, FaNetworkWired, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
 import { SiRust } from 'react-icons/si';
 
 export const userData = {
@@ -57,6 +57,12 @@ export const socialLinks: SocialLink[] = [
     icon: 'FaGithub',
     url: 'https://github.com/harilvfs',
     ariaLabel: 'GitHub Profile'
+  },
+  {
+    name: 'Blog',
+    icon: 'FaBlog',
+    url: 'https://blog.chalisehari.com.np',
+    ariaLabel: 'Blog'
   }
 ];
 

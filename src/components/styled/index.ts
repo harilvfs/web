@@ -1225,7 +1225,7 @@ export const ProfileBio = styled.p`
   font-size: 0.9rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.subtext0};
-  margin: 1rem 0;
+  margin: 1rem auto;
   max-width: 300px;
   text-align: center;
   font-style: normal;

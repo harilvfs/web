@@ -21,7 +21,7 @@ export const userData = {
     },
     {
       command: 'cat journey.txt',
-      text: "I <b>got</b> into Linux because of <i>fuc*ing</i> Microsoft shenanigans that they are doing with <b>Windows</b> & choosing <b>Linux</b> has been the best decision I have ever made in my life. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with <i>Bash</i> and now learning <i>Rust(btw)</i>."
+      text: "I <b>got</b> into Linux because of <b>Microsoft</b> shenanigans that they are doing with <b>Windows</b> & choosing <b>Linux</b> has been the best decision I have ever made in my life. I do tweaking systems, customizing kernels, and scripting stuff to make my setup run just right. I'm a little proficient with <i>Bash</i> and now learning <i>Rust(btw)</i>."
     }
   ],
   email: 'harilvfs@chalisehari.com.np'

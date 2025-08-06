@@ -911,13 +911,6 @@ export const ProjectLink = styled.a`
   text-decoration: none;
   display: inline-block;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    background-color: ${({ theme }) => theme.lavender};
-    transform: translateY(-2px);
-    color: ${({ theme }) => theme.crust};
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
 `;
 
 export const ContactForm = styled.form`
